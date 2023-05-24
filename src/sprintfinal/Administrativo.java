@@ -15,3 +15,4 @@ public class Administrativo extends Usuario{
 		System.out.println("Área: "+ area + ", Experiencia previa: " + experienciaPrevia + "\n");
 	}
 }
+// comentario prueba de git
