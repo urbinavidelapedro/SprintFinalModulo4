@@ -1,4 +1,4 @@
-package TrabajoGrupal16;
+package sprintfinal;
 
 public class Cliente extends Usuario{
 	private String idCliente;
