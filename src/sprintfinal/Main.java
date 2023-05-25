@@ -33,21 +33,7 @@ public class Main {
 		lista.agregarUsuario(administrativo1);
 		lista.agregarUsuario(administrativo2);		
 		
-		
 		lista.imprimirUsuarios();
 
-	
-		System.out.println("ID revisión: "+revision.getIdRevision()+"\n"+ "ID de visita terreno" +revision.getIdVisitaTerreno()+ "\n"+"Nombre de revisión"+
-		revision.getNombreRevision()+"\n"+"Detalle de revisión: "+revision.getDetalleRevision()+"\n"+"Estado: "+revision.getEstado()+"\n");
-
-		
-		//Comprobacion
-		System.out.println("Identificador: " +accidente1.getIdAccidente() +", Rut: "+accidente1.getRutCliente()+
-				", Día: "+accidente1.getDia().getDayOfMonth() +"/"+accidente1.getDia().getMonthValue()+"/"
-				+accidente1.getDia().getYear() + 
-				", Hora: "+accidente1.getHora()+", Lugar: "+accidente1.getLugar()+", Origen: "
-				+accidente1.getOrigen()+", Consecuencias: "+accidente1.getConsecuencias());		
-		
 	}
-
 }

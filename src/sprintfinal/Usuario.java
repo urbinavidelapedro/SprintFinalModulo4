@@ -12,4 +12,8 @@ public class Usuario implements IAsesoria{
 	public void analizarUsuario() {
 		System.out.println("Nombre usuario: "+nombre);
 	}
+	
+	public void mostrarEdad() {
+		
+	}
 }
