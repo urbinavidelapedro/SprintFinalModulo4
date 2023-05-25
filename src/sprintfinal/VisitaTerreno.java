@@ -15,8 +15,13 @@ public class VisitaTerreno {
 	
 	VisitaTerreno(int idVisitaTerreno, String rutCliente, String lugar, String comentarios, LocalDate dia,
 			LocalTime hora) {
-		this.idVisitaTerreno = idVisitaTerreno;
-		this.rutCliente = rutCliente;
+		this.idVisitaTerreno=idVisitaTerreno;
+		//Validación rutCliente
+		while(rutCliente==null) {
+			System.out.println("Ingrese un rut de cliente válido");
+			rutCliente=sc.nextLine();
+		}
+		this.rutCliente=rutCliente;
 		//validación de lugar
 		while(lugar.length()<10 || lugar.length()>50) {
 			System.out.println("El lugar debe tener entre 10 y 50 caracteres");
