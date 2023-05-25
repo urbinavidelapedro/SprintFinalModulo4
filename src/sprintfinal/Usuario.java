@@ -22,8 +22,10 @@ public class Usuario implements IAsesoria{
 			System.out.println("Ingrese un día");
 			dia=sc.nextInt();
 			sc.nextLine();
+			System.out.println("Ingrese un mes");
 			mes=sc.nextInt();
 			sc.nextLine();
+			System.out.println("Ingrese un año");
 			año=sc.nextInt();
 			sc.nextLine();
 			fechaNacimiento=LocalDate.of(año, mes, dia);
