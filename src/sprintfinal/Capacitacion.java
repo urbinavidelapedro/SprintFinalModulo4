@@ -83,6 +83,12 @@ public class Capacitacion {
 
 		this.cantidadAsistentes=cantidadAsistentes;
 
+		}
+
+		public void mostrarDetalle() {
+			System.out.println("La capacitación será en: "+lugar+" a las: "+hora+" del día: "+dia+"y durará: "+duracion+" minutos");
+		}
+
 	}
 
 
@@ -92,60 +98,7 @@ public class Capacitacion {
 
 
 
-	public int getIdentificador() {
-		return identificador;
-	}
 
-	public void setIdentificador(int identificador) {
-		this.identificador = identificador;
-	}
 
-	public int getCantidadAsistentes() {
-		return cantidadAsistentes;
-	}
 
-	public void setCantidadAsistentes(int cantidadAsistentes) {
-		this.cantidadAsistentes = cantidadAsistentes;
-	}
 
-	public String getRut() {
-		return rut;
-	}
-
-	public void setRut(String rut) {
-		this.rut = rut;
-	}
-
-	public String getDia() {
-		return dia;
-	}
-
-	public void setDia(String dia) {
-		this.dia = dia;
-	}
-
-	public String getLugar() {
-		return lugar;
-	}
-
-	public void setLugar(String lugar) {
-		this.lugar = lugar;
-	}
-
-	public String getDuracion() {
-		return duracion;
-	}
-
-	public void setDuracion(String duracion) {
-		this.duracion = duracion;
-	}
-
-	public LocalTime getHora() {
-		return hora;
-	}
-
-	public void setHora(LocalTime hora) {
-		this.hora = hora;
-	}
-
-}
