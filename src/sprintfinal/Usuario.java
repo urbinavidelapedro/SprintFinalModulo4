@@ -46,7 +46,7 @@ public class Usuario implements IAsesoria{
 	}
 	
 	public void mostrarEdad() {
-		Period periodo;
-		System.out.println("El usuario tiene " + periodo.between(fechaNacimiento, LocalDate.now()));
+		Period periodo = Period.between(fechaNacimiento, LocalDate.now());
+		System.out.println("El usuario tiene " + periodo.getYears()+" años");
 	}
 }
