@@ -24,7 +24,7 @@ public class Main {
 		Revision revision = new Revision(1,2,"Revision de facturas","facturas con errores",1);
 
 		Accidente accidente1 = new Accidente(12354, "13513511", LocalDate.of(1997, 5, 12),LocalTime.of(5, 0),
-				"En un lugar lejano de toda civilizacion",	"", "Murio" );
+				"En un lugar lejano de toda civilizacion","","Murio" );
 
 		
 		lista.agregarUsuario(cliente1);
