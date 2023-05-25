@@ -34,6 +34,7 @@ public class Capacitacion {
 		while(!dia.equals("LUNES") && !dia.equals("MARTES") && !dia.equals("MIERCOLES") && !dia.equals("JUEVES") && !dia.equals("VIERNES") && !dia.equals("SABADO") && !dia.equals("DOMINGO")) {
 			System.out.println("Por favor ingresa un día de la semana valido");
 			dia=sc.nextLine();
+			dia = Normalizer.normalize(dia, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
 			dia = dia.toUpperCase();
 		}
 
@@ -44,13 +45,7 @@ public class Capacitacion {
 		this.hora=hora;
 
 
-		/*
-		while (lugar.isEmpty() || lugar.length()<10 || lugar.length()>50) {
-			System.out.println("El lugar ingresado no es válido");
-			lugar=sc.nextLine();
 
-		}
-		*/
 		while(lugar.isEmpty()) {
 			System.out.println("El campo lugar es obligatorio ingresalo denuevo por favor");
 			lugar=sc.nextLine();
