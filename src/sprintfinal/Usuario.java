@@ -1,6 +1,7 @@
 package sprintfinal;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.Scanner;
 
 public class Usuario implements IAsesoria{
@@ -41,10 +42,11 @@ public class Usuario implements IAsesoria{
 	}
 	
 	public void analizarUsuario() {
-		System.out.println("Nombre usuario: "+nombre);
+		System.out.println("Nombre usuario: "+nombre+", RUN: "+run);
 	}
 	
 	public void mostrarEdad() {
-		System.out.println("El usuario tiene ");
+		Period periodo;
+		System.out.println("El usuario tiene " + periodo.between(fechaNacimiento, LocalDate.now()));
 	}
 }

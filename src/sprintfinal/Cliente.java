@@ -10,7 +10,8 @@ public class Cliente extends Usuario{
 		this.idCliente=idCliente;
 		// TODO Auto-generated constructor stub
 	}
-
+	
+	@Override
 	public void analizarUsuario() {
 		super.analizarUsuario();
 		System.out.println("Id Cliente: "+idCliente+"\n");

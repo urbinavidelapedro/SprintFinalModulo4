@@ -39,6 +39,5 @@ public class Main {
 		lista.imprimirUsuarios();
 
 		capacitacion1.mostrarDetalle();
-
 	}
 }
