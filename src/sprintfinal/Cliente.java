@@ -28,7 +28,6 @@ public class Cliente extends Usuario{
 		while(sistemaSalud != 1 || sistemaSalud != 2) {
 			System.out.println("Debe ingresar opcion 1 para fonasa o 2 para isapre");
 			sistemaSalud=sc.nextInt();
-			sc.nextLine();
 		}
 		this.sistemaSalud= sistemaSalud;
 		
