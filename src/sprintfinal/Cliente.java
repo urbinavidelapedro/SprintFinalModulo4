@@ -16,5 +16,3 @@ public class Cliente extends Usuario{
 		System.out.println("Id Cliente: "+idCliente+"\n");
 	}
 }
-
-// Comentario de verificación hecho por Pedro Urbina
