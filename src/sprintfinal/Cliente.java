@@ -1,5 +1,6 @@
 package sprintfinal;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Cliente extends Usuario{
@@ -7,12 +8,12 @@ public class Cliente extends Usuario{
 	private int sistemaSalud, edad;
 	
 
-	public Cliente(String nombre, String apellido, int run, String telefono,
+	public Cliente(String nombre, String apellido, LocalDate fechaNacimiento,int run, String telefono,
 			String afp, int sistemaSalud, String direccion, String comuna, int edad) {
 		
 				
 		//agregar run de usuario
-		super(nombre, apellido);
+		super(nombre, apellido, fechaNacimiento,run);
 		Scanner sc = new Scanner (System.in);
 		while(telefono.isEmpty()) {
 			System.out.println("Favor Ingrese un teléfono válido");
