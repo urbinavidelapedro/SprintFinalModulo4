@@ -1,6 +1,7 @@
 package sprintfinal;
 
 import java.time.LocalTime;
+import java.text.Normalizer;
 import java.util.Scanner;
 
 public class Capacitacion {
@@ -26,12 +27,20 @@ public class Capacitacion {
 		}
 		this.rut=rut;
 
-		while(dia!="Lunes"&&dia!="Martes"&&dia!="Miércoles"&&dia!="Jueves"&&dia!="Viernes"&&dia!="Sábado"&&dia!="Domingo") {
+		dia = Normalizer.normalize(dia, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
+		dia = dia.toUpperCase();
+
+
+		while(!dia.equals("LUNES") && !dia.equals("MARTES") && !dia.equals("MIERCOLES") && !dia.equals("JUEVES") && !dia.equals("VIERNES") && !dia.equals("SABADO") && !dia.equals("DOMINGO")) {
 			System.out.println("Por favor ingresa un día de la semana valido");
 			dia=sc.nextLine();
+			dia = dia.toUpperCase();
 		}
+
+		dia = dia.toUpperCase().charAt(0) + dia.substring(1).toLowerCase();
+
 		this.dia=dia;
-		
+
 		this.hora=hora;
 
 
