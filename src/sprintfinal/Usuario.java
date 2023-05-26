@@ -6,12 +6,12 @@ import java.util.Scanner;
 
 public class Usuario implements IAsesoria{
 	String nombre, apellido;
-	int run,dia,mes,año;
+	int run;
 	LocalDate fechaNacimiento;
 	Scanner sc = new Scanner(System.in);
 	
 	public Usuario(String nombre, String apellido, LocalDate fechaNacimiento, int run) {
-		
+		int dia,mes,año;
 		while(nombre.length()<10 || nombre.length()>50) {
 			System.out.println("Ingrese un nombre de usuario entre 10 y 50 caracteres");
 			nombre=sc.nextLine();
@@ -52,4 +52,46 @@ public class Usuario implements IAsesoria{
 		Period periodo = Period.between(fechaNacimiento, LocalDate.now());
 		System.out.println("El usuario tiene " + periodo.getYears()+" años");
 	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public int getRun() {
+		return run;
+	}
+
+	public void setRun(int run) {
+		this.run = run;
+	}
+
+	public LocalDate getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(LocalDate fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public Scanner getSc() {
+		return sc;
+	}
+
+	public void setSc(Scanner sc) {
+		this.sc = sc;
+	}
+	
+	
 }
