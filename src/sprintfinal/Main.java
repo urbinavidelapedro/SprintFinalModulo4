@@ -29,7 +29,7 @@ public class Main {
 
 		Capacitacion capacitacion1=new Capacitacion(2353,"6545363-5","marté",LocalTime.of(9, 0),"lugar","40",1000);
 
-
+		
 		lista.agregarUsuario(cliente1);
 		lista.agregarUsuario(profesional1);
 		lista.agregarUsuario(profesional2);
@@ -39,5 +39,7 @@ public class Main {
 		lista.imprimirUsuarios();
 
 		capacitacion1.mostrarDetalle();
+		
+		cliente1.mostrarEdad();
 	}
 }
