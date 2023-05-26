@@ -51,6 +51,7 @@ public class Main {
 				System.out.println("Ingrese una edad");
 				edad=sc.nextInt();
 				sc.nextLine();
+				contenedor.almacenarCliente(cliente);
 				opcion=desplegarMenu();
 				break;
 			case 2:

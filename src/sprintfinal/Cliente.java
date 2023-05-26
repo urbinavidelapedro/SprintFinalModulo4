@@ -52,10 +52,6 @@ public class Cliente extends Usuario{
 			sc.nextLine();
 		}
 		this.edad = edad;
-		
-		
-		
-		
 	}
 	
 	public String getTelefono() {

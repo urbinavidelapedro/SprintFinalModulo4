@@ -24,5 +24,4 @@ public class Profesional extends Usuario{
 		super.analizarUsuario();
 		System.out.println("Título: "+ titulo + ", Fecha ingreso: " + fechaIngreso + "\n");
 	}
-	
 }
