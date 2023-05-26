@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Contenedor {
-	private List<IAsesoria> usuarios=new ArrayList<>();
+	private List<Object> usuarios = new ArrayList<>();
 	private List<Capacitacion> capacitaciones=new ArrayList<>();
 	
 	public Contenedor() {
 		
 	}
 
-	public Contenedor(List<IAsesoria> usuarios, List<Capacitacion> capacitaciones) {
+	public Contenedor(List<Object> usuarios, List<Capacitacion> capacitaciones) {
 		this.usuarios = usuarios;
 		this.capacitaciones = capacitaciones;
 	}
@@ -33,26 +33,53 @@ public class Contenedor {
 	}
 	
 	public void eliminarUsuario(int run) {
-		for (Usuario usuario : usuarios) {
-			if(usuario.getRun()==run) {
+		for (Object usuario : usuarios) {
+			Usuario usuario1 = (Usuario)usuario;
+			if(usuario1.getRun()==run) {
 				usuarios.remove(usuario);
 			}
 		}
 	}
 	
 	public void listarUsuarios() {
-		for (Usuario usuario : usuarios) {
-			System.out.println(usuario.toString());			
+		for (Object obj : usuarios) {
+			Usuario usuario1=(Usuario)obj;
+			System.out.println(usuario1.toString());
 		}
 	}
 	
 	public void listarUsuarioPorTipo(String tipoUsuario) {
-		switch (tipoUsuario) {
-		case "Administrativo":
-			for (Administrativo administrativo : usuarios) {
-				
-			}
+		switch(tipoUsuario) {
+			case "Administrativo":
+				for(Object obj:usuarios) {
+					if(obj instanceof Administrativo) {
+						Administrativo administrativo = (Administrativo) obj;
+						System.out.println(administrativo.toString());
+					}
+				}
+				break;
+			case "Profesional":
+				for(Object obj:usuarios) {
+					if(obj instanceof Profesional) {
+						Profesional profesional = (Profesional) obj;
+						System.out.println(profesional.toString());
+					}
+				}
+				break;
+			case "Cliente":
+				for(Object obj:usuarios) {
+					if(obj instanceof Cliente) {
+						Cliente cliente = (Cliente) obj;
+						System.out.println(cliente.toString());
+					}
+				}
+				break;
 		}
 	}
 	
+	public void listarCapacitaciones() {
+		for (Capacitacion capacitacion : capacitaciones) {
+			System.out.println(capacitacion.toString());
+		}
+	}
 }
