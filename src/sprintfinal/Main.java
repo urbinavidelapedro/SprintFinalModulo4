@@ -15,11 +15,11 @@ public class Main {
 
 		Listado lista = new Listado();
 
-		Profesional profesional1=new Profesional("Martin","Cárdenas",LocalDate.of(1992, 12, 25),17345126,"Ingeniero agrónomo","18/07/2000");
-		Profesional profesional2=new Profesional("Rafael","Carrasco",LocalDate.of(1991, 06, 25),14513852,"Ingeniero químico","30/12/2140");
-		Administrativo administrativo1=new Administrativo("Carla","Soto",LocalDate.of(2000,7,20),19456315,"TI","Alcaldesa");
-		Administrativo administrativo2=new Administrativo("Carlos","Franco",LocalDate.of(1990,4,6),145615456,"Contabilidad","Presidente");
-		Cliente cliente1=new Cliente("Max","Cuevas",LocalDate.of(2016,12,10),456123485,"25465463","Habitat",1,"Padre las casas 2121","Santiago", 23);
+		Profesional profesional1=new Profesional("Martin Carrasco","Cárdenas",LocalDate.of(1992, 12, 25),17345126,"Ingeniero agrónomo","18/07/2000");
+		Profesional profesional2=new Profesional("Rafael Martinez","Carrasco",LocalDate.of(1991, 06, 25),14513852,"Ingeniero químico","30/12/2140");
+		Administrativo administrativo1=new Administrativo("Carla Manriquez","Soto",LocalDate.of(2000,7,20),19456315,"TI","Alcaldesa");
+		Administrativo administrativo2=new Administrativo("Carlos Francisco","Franco",LocalDate.of(1990,4,6),145615456,"Contabilidad","Presidente");
+		Cliente cliente1=new Cliente("Maximilian Dood","Cuevas",LocalDate.of(2016,12,10),456123485,"25465463","Habitat",1,"Padre las casas 2121","Santiago", 23);
 
 
 		Revision revision = new Revision(1,2,"Revision de facturas","facturas con errores",1);
