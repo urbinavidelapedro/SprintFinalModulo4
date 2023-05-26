@@ -86,7 +86,7 @@ public class Capacitacion {
 		}
 
 		public void mostrarDetalle() {
-			System.out.println("La capacitación será en: "+lugar+" a las: "+hora+" del día: "+dia+"y durará: "+duracion+" minutos");
+			System.out.println("La capacitación será en "+lugar+" a las "+hora+" del día "+dia+"y durará "+duracion+" minutos");
 		}
 
 	}
