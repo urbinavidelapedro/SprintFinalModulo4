@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Cliente extends Usuario{
-	private String telefono,afp,direccion, comuna;
+	private String telefono, afp, direccion, comuna;
 	private int sistemaSalud, edad;
 	
 
@@ -25,7 +25,7 @@ public class Cliente extends Usuario{
 			afp = sc.nextLine();
 		}
 		this.afp = afp;
-		while(sistemaSalud != 1 || sistemaSalud != 2) {
+		while(sistemaSalud != 1 && sistemaSalud != 2) {
 			System.out.println("Debe ingresar opcion 1 para fonasa o 2 para isapre");
 			sistemaSalud=sc.nextInt();
 		}
