@@ -85,12 +85,10 @@ public class Usuario implements IAsesoria{
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-	public Scanner getSc() {
-		return sc;
-	}
-
-	public void setSc(Scanner sc) {
-		this.sc = sc;
+	@Override
+	public String toString() {
+		return "Usuario [nombre=" + nombre + ", apellido=" + apellido + ", run=" + run + ", fechaNacimiento="
+				+ fechaNacimiento +"]";
 	}
 	
 	
