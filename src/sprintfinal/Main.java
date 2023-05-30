@@ -26,6 +26,8 @@ public class Main {
 				System.out.println("Ingrese un apellido");
 				apellido=sc.nextLine();
 				cliente.setApellido(apellido);
+				System.out.println("Ingrese un rut");
+				
 				System.out.println("Fecha de nacimiento");
 				System.out.println("Ingrese un día");
 				dia=sc.nextInt();
@@ -70,8 +72,9 @@ public class Main {
 				opcion=desplegarMenu();
 				break;
 			case 5:
-				System.out.println("Ingrese un rut para eliminar");
+				System.out.println("Ingrese un rut para eliminar");	
 				run=sc.nextInt();
+				sc.nextLine();
 				contenedor.eliminarUsuario(run);
 				opcion=desplegarMenu();
 				break;
