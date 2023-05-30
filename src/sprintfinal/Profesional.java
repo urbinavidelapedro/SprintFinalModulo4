@@ -6,7 +6,6 @@ public class Profesional extends Usuario{
 	
 	String titulo, fechaIngreso;
 	
-	
 	public Profesional() {
 		
 	}
@@ -24,4 +23,32 @@ public class Profesional extends Usuario{
 		super.analizarUsuario();
 		System.out.println("Título: "+ titulo + ", Fecha ingreso: " + fechaIngreso + "\n");
 	}
+
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+
+	public String getFechaIngreso() {
+		return fechaIngreso;
+	}
+
+
+	public void setFechaIngreso(String fechaIngreso) {
+		this.fechaIngreso = fechaIngreso;
+	}
+
+
+	@Override
+	public String toString() {
+		return super.toString();
+	}
+	
+	
 }

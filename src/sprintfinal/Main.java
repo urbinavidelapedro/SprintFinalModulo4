@@ -9,8 +9,9 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		Cliente cliente;
+		Profesional profesional;
 		Contenedor contenedor = new Contenedor();
-		String nombre,apellido,tipoUsuario,telefono,direccion,comuna,afp;
+		String nombre,apellido,tipoUsuario,telefono,direccion,comuna,afp,titulo,fechaIngreso;
 		LocalDate fechaNacimiento;
 		LocalTime hora;
 		int opcion,run,dia,mes,año,sistemaSalud,edad;
@@ -27,7 +28,9 @@ public class Main {
 				apellido=sc.nextLine();
 				cliente.setApellido(apellido);
 				System.out.println("Ingrese un rut");
-				
+				run=sc.nextInt();
+				sc.nextLine();
+				cliente.setRun(run);
 				System.out.println("Fecha de nacimiento");
 				System.out.println("Ingrese un día");
 				dia=sc.nextInt();
@@ -57,8 +60,36 @@ public class Main {
 				opcion=desplegarMenu();
 				break;
 			case 2:
+				profesional = new Profesional();
 				System.out.println("Almacenando profesional");
-				contenedor.almacenarProfesional(null);
+				System.out.println("Ingrese un nombre");
+				nombre=sc.nextLine();
+				profesional.setNombre(nombre);
+				System.out.println("Ingrese un apellido");
+				apellido=sc.nextLine();
+				profesional.setApellido(apellido);
+				System.out.println("Ingrese un rut");
+				run=sc.nextInt();
+				profesional.setRun(run);
+				sc.nextLine();
+				System.out.println("Fecha de nacimiento");
+				System.out.println("Ingrese un día");
+				dia=sc.nextInt();
+				sc.nextLine();
+				System.out.println("Ingrese un mes");
+				mes=sc.nextInt();
+				sc.nextLine();
+				System.out.println("Ingrese un año");
+				año=sc.nextInt();
+				sc.nextLine();
+				profesional.setFechaNacimiento(dia,mes,año);
+				System.out.println("Ingrese el título del profesional");
+				titulo=sc.nextLine();
+				profesional.setTitulo(titulo);
+				System.out.println("Ingrese la fecha de ingreso del profesional");
+				fechaIngreso=sc.nextLine();
+				profesional.setFechaIngreso(fechaIngreso);
+				contenedor.almacenarProfesional(profesional);
 				opcion=desplegarMenu();
 				break;
 			case 3:

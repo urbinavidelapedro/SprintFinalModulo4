@@ -35,8 +35,9 @@ public class Contenedor {
 	public void eliminarUsuario(int run) {
 		for (Object usuario : usuarios) {
 			Usuario usuario1 = (Usuario)usuario;
-			if(usuario1.getRun()==run) {
+			if(usuario1.getRun()==(run)) {
 				usuarios.remove(usuario);
+				break;
 			}
 		}
 	}

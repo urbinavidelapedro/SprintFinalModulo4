@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Usuario implements IAsesoria{
 	String nombre, apellido;
-	int run;
+	int run, dia, mes, año;
 	LocalDate fechaNacimiento;
 	Scanner sc = new Scanner(System.in);
 	
@@ -81,14 +81,29 @@ public class Usuario implements IAsesoria{
 		return fechaNacimiento;
 	}
 
-	public void setFechaNacimiento(LocalDate fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
+	public void setFechaNacimiento(int dia, int mes, int año) {
+		while (dia>31 && dia<1) {
+			System.out.println("Ingrese un día válido");
+			dia=sc.nextInt();
+			sc.nextLine();
+		}
+		while (mes>12 && mes<1) {
+			System.out.println("Ingrese un mes válido");
+			dia=sc.nextInt();
+			sc.nextLine();
+		}
+		while (año<0 && año>2023) {
+			System.out.println("Ingrese un año válido");
+			año=sc.nextInt();
+			sc.nextLine();
+		}
+		this.fechaNacimiento=LocalDate.of(año, mes, dia);
 	}
 
 	@Override
 	public String toString() {
 		return "Usuario [nombre=" + nombre + ", apellido=" + apellido + ", run=" + run + ", fechaNacimiento="
-				+ fechaNacimiento +"]";
+				+ fechaNacimiento.getDayOfMonth()+"/"+fechaNacimiento.getMonthValue()+"/"+fechaNacimiento.getYear()+"]";
 	}
 	
 	

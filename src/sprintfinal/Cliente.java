@@ -109,29 +109,5 @@ public class Cliente extends Usuario{
 		}else {
 			System.out.println("Su sistema de salud es Isapre");
 		}
-		
 	}
-	public void setFechaNacimiento(int dia, int mes, int año) {
-		while (dia>31 && dia<1) {
-			System.out.println("Ingrese un día válido");
-			dia=sc.nextInt();
-			sc.nextLine();
-		}
-		while (mes>12 && mes<1) {
-			System.out.println("Ingrese un mes válido");
-			dia=sc.nextInt();
-			sc.nextLine();
-		}
-		while (año<0 && año>2023) {
-			System.out.println("Ingrese un año válido");
-			año=sc.nextInt();
-			sc.nextLine();
-		}
-		this.fechaNacimiento=LocalDate.of(año, mes, dia);
-	}
-	
-	
-	
-	
-	
 }
