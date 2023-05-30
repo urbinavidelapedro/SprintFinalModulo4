@@ -131,9 +131,7 @@ public class Capacitacion {
 	public String toString() {
 		return "Capacitacion [identificador=" + identificador + ", cantidadAsistentes=" + cantidadAsistentes + ", rut="
 				+ rut + ", dia=" + dia + ", lugar=" + lugar + ", duracion=" + duracion + ", hora=" + hora + "]";
-	}
-
-	
+	}	
 }
 
 
