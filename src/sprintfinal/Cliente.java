@@ -110,4 +110,6 @@ public class Cliente extends Usuario{
 			System.out.println("Su sistema de salud es Isapre");
 		}
 	}
+	
+	
 }
