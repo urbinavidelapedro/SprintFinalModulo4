@@ -9,11 +9,9 @@ public class Capacitacion {
 	String rut,dia,lugar,duracion,identificador,hora;
 	Scanner sc = new Scanner(System.in);
 
-
 	public Capacitacion () {
 
 	}
-
 
 	public Capacitacion(int cantidadAsistentes, String rut, String dia, String lugar, String duracion,
 			String identificador, String hora) {
@@ -27,15 +25,9 @@ public class Capacitacion {
 		this.hora = hora;
 	}
 
-
-
-
-
 	public String getIdentificador() {
 		return identificador;
 	}
-
-
 
 	public void setIdentificador(String identificador) {
 	    while (true) {
@@ -48,18 +40,10 @@ public class Capacitacion {
 	        }
 	    }
 	}
-
-
-
-
+	
 	public int getCantidadAsistentes() {
 		return cantidadAsistentes;
 	}
-
-
-
-
-
 
 	public void setCantidadAsistentes(int cantidadAsistentes) {
 		while(cantidadAsistentes<=0) {
@@ -75,19 +59,9 @@ public class Capacitacion {
 		this.cantidadAsistentes=cantidadAsistentes;
 	}
 
-
-
-
-
-
 	public String getRut() {
 		return rut;
 	}
-
-
-
-
-
 
 	public void setRut(String rut) {
 		while(rut.isEmpty()) {
@@ -97,19 +71,9 @@ public class Capacitacion {
 		this.rut=rut;
 	}
 
-
-
-
-
-
 	public String getDia() {
 		return dia;
 	}
-
-
-
-
-
 
 	public void setDia(String dia) {
 		dia = Normalizer.normalize(dia, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
@@ -128,19 +92,9 @@ public class Capacitacion {
 		this.dia=dia;
 	}
 
-
-
-
-
-
 	public String getLugar() {
 		return lugar;
 	}
-
-
-
-
-
 
 	public void setLugar(String lugar) {
 		while(lugar.isEmpty()) {
@@ -154,20 +108,10 @@ public class Capacitacion {
 		}
 		this.lugar=lugar;
 	}
-
-
-
-
-
-
+	
 	public String getDuracion() {
 		return duracion;
 	}
-
-
-
-
-
 
 	public void setDuracion(String duracion) {
 		while(duracion.isEmpty()) {
@@ -181,20 +125,10 @@ public class Capacitacion {
 		}
 		this.duracion=duracion;
 	}
-
-
-
-
-
-
+	
 	public String getHora() {
 		return hora;
 	}
-
-
-
-
-
 
 	public void setHora(String hora) {
 	    while (true) {
@@ -208,36 +142,15 @@ public class Capacitacion {
 	    }
 	}
 
-
-
-
-
-
-
 	public void mostrarDetalle() {
 	System.out.println("La capacitación será en "+lugar+" a las "+hora+" del día "+dia+"y durará "+duracion+" minutos");
 	}
 
-
-		@Override
-		public String toString() {
-			return "Capacitacion [identificador=" + identificador + ", cantidadAsistentes=" + cantidadAsistentes
-					+ ", rut=" + rut + ", dia=" + dia + ", lugar=" + lugar + ", duracion=" + duracion + ", hora=" + hora
-					+ "]";
-		}
-
+	@Override
+	public String toString() {
+		return "Capacitacion [identificador=" + identificador + ", cantidadAsistentes=" + cantidadAsistentes
+				+ ", rut=" + rut + ", dia=" + dia + ", lugar=" + lugar + ", duracion=" + duracion + ", hora=" + hora
+				+ "]";
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
