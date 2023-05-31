@@ -4,7 +4,11 @@ package sprintfinal;
 
 import java.time.LocalTime;
 import java.util.Scanner;
-
+/**
+ * 
+ * Implementación del código
+ * 
+ */
 public class Main {
 
 	public static void main(String[] args) {

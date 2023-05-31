@@ -42,7 +42,6 @@ public class Administrativo extends Usuario{
 		this.experienciaPrevia=experienciaPrevia;
 	}
 	
-	
 	public void analizarUsuario() {
 		super.analizarUsuario();
 		System.out.println("Area: "+ area + ", Experiencia previa: " + experienciaPrevia + "\n");
