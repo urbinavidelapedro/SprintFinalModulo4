@@ -45,12 +45,10 @@ public class Administrativo extends Usuario{
 	
 	public void analizarUsuario() {
 		super.analizarUsuario();
-		System.out.println("Área: "+ area + ", Experiencia previa: " + experienciaPrevia + "\n");
+		System.out.println("Area: "+ area + ", Experiencia previa: " + experienciaPrevia + "\n");
 	}
 
 	public String listarAdministrativo() {
 		return super.toString()+" Administrativo [area=" + area + ", experienciaPrevia=" + experienciaPrevia + "]";
 	}
-	
-	
 }
