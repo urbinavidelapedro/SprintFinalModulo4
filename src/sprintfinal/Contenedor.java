@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Contenedor {
-	private List<Object> usuarios = new ArrayList<>();
+	private List<IAsesoria> usuarios = new ArrayList<>();
 	private List<Capacitacion> capacitaciones=new ArrayList<>();
 	
 	public Contenedor() {
 		
 	}
 
-	public Contenedor(List<Object> usuarios, List<Capacitacion> capacitaciones) {
+	public Contenedor(List<IAsesoria> usuarios, List<Capacitacion> capacitaciones) {
 		this.usuarios = usuarios;
 		this.capacitaciones = capacitaciones;
 	}
