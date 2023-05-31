@@ -13,17 +13,8 @@ public class Administrativo extends Usuario{
 	}
 	
 	public Administrativo(String nombre, String apellido,LocalDate fechaNacimiento,int run, String area, String experienciaPrevia) {
-		super(nombre, apellido, fechaNacimiento, run);
-	
-		while(area.length()<5 || area.length()>20) {
-			System.out.println("Favor el area debe estar entre 5 y 20 caracteres");
-			area=sc.nextLine();
-		}
+		super(nombre, apellido, fechaNacimiento,run);
 		this.area=area;
-		while(experienciaPrevia.length()>100) {
-			System.out.println("Item experiencia previa debe tener menos de 100 caracteres");
-			experienciaPrevia=sc.nextLine();
-		}
 		this.experienciaPrevia=experienciaPrevia;
 	}
 	
