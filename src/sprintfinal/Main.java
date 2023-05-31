@@ -155,7 +155,7 @@ public class Main {
 				System.out.println("Ingrese el rut");
 				rutCapacitacion=sc.nextLine();
 				capacitacion.setRut(rutCapacitacion);
-				System.out.println("Ingrese el día de la capacitación");
+				System.out.println("Ingrese el día de la capacitación (Lunes, Martes, Miércoles, Jueves, Viernes, Sábado o Domingo)");
 				diaCapacitacion=sc.nextLine();
 				capacitacion.setDia(diaCapacitacion);
 				System.out.println("Ingrese a que hora es la capacitación (hh:mm)");
