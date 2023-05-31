@@ -110,7 +110,6 @@ public class Cliente extends Usuario{
 		while (edad < 0 || edad > 150) {
 			System.out.println("Edad debe ir de 0 a 150 años");
 			edad = sc.nextInt();
-			sc.nextLine();
 		}
 		this.edad = edad;
 	}
