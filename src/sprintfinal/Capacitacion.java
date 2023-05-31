@@ -1,13 +1,12 @@
 package sprintfinal;
 
-import java.time.LocalTime;
+
 import java.text.Normalizer;
 import java.util.Scanner;
 
 public class Capacitacion {
-	int identificador,cantidadAsistentes;
-	String rut,dia,lugar,duracion;
-	LocalTime hora;
+	int cantidadAsistentes;
+	String rut,dia,lugar,duracion,identificador,hora;
 	Scanner sc = new Scanner(System.in);
 
 
@@ -16,33 +15,51 @@ public class Capacitacion {
 	}
 
 
-
-	public Capacitacion(int identificador, int cantidadAsistentes, String rut, String dia, String lugar,
-			String duracion, LocalTime hora) {
-		this.identificador = identificador;
+	public Capacitacion(int cantidadAsistentes, String rut, String dia, String lugar, String duracion,
+			String identificador, String hora) {
+		super();
 		this.cantidadAsistentes = cantidadAsistentes;
 		this.rut = rut;
 		this.dia = dia;
 		this.lugar = lugar;
 		this.duracion = duracion;
+		this.identificador = identificador;
 		this.hora = hora;
 	}
 
-	public int getIdentificador() {
+
+
+
+
+	public String getIdentificador() {
 		return identificador;
 	}
 
-	public void setIdentificador(int identificador) {
-		while(identificador<=0) {
-			System.out.println("El campo identificador es obligatorio ingresalo denuevo por favor");
-			identificador=sc.nextInt();
-		}
-		this.identificador=identificador;
+
+
+	public void setIdentificador(String identificador) {
+	    while (true) {
+	        if (identificador.matches("\\d+")) {
+	            this.identificador = identificador;
+	            break;
+	        } else {
+	            System.out.println("El identificador debe ser un número entero. Ingréselo nuevamente: ");
+	            identificador = sc.nextLine();
+	        }
+	    }
 	}
+
+
+
 
 	public int getCantidadAsistentes() {
 		return cantidadAsistentes;
 	}
+
+
+
+
+
 
 	public void setCantidadAsistentes(int cantidadAsistentes) {
 		while(cantidadAsistentes<=0) {
@@ -58,9 +75,19 @@ public class Capacitacion {
 		this.cantidadAsistentes=cantidadAsistentes;
 	}
 
+
+
+
+
+
 	public String getRut() {
 		return rut;
 	}
+
+
+
+
+
 
 	public void setRut(String rut) {
 		while(rut.isEmpty()) {
@@ -70,9 +97,19 @@ public class Capacitacion {
 		this.rut=rut;
 	}
 
+
+
+
+
+
 	public String getDia() {
 		return dia;
 	}
+
+
+
+
+
 
 	public void setDia(String dia) {
 		dia = Normalizer.normalize(dia, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
@@ -91,9 +128,19 @@ public class Capacitacion {
 		this.dia=dia;
 	}
 
+
+
+
+
+
 	public String getLugar() {
 		return lugar;
 	}
+
+
+
+
+
 
 	public void setLugar(String lugar) {
 		while(lugar.isEmpty()) {
@@ -108,9 +155,19 @@ public class Capacitacion {
 		this.lugar=lugar;
 	}
 
+
+
+
+
+
 	public String getDuracion() {
 		return duracion;
 	}
+
+
+
+
+
 
 	public void setDuracion(String duracion) {
 		while(duracion.isEmpty()) {
@@ -125,25 +182,51 @@ public class Capacitacion {
 		this.duracion=duracion;
 	}
 
-	public LocalTime getHora() {
+
+
+
+
+
+	public String getHora() {
 		return hora;
 	}
 
-	public void setHora(LocalTime hora) {
-		this.hora = hora;
+
+
+
+
+
+	public void setHora(String hora) {
+	    while (true) {
+	        if (hora.matches("^([01]?\\d|2[0-3]):[0-5]\\d$")) {
+	            this.hora = hora;
+	            break;
+	        } else {
+	            System.out.println("El formato de hora debe ser HH:MM. Ingréselo nuevamente: ");
+	            hora = sc.nextLine();
+	        }
+	    }
 	}
+
+
+
+
+
+
 
 	public void mostrarDetalle() {
 	System.out.println("La capacitación será en "+lugar+" a las "+hora+" del día "+dia+"y durará "+duracion+" minutos");
 	}
 
-	@Override
-	public String toString() {
-		return "Capacitacion [identificador=" + identificador + ", cantidadAsistentes=" + cantidadAsistentes
-				+ ", rut=" + rut + ", dia=" + dia + ", lugar=" + lugar + ", duracion=" + duracion + ", hora=" + hora
-				+ "]";
+
+		@Override
+		public String toString() {
+			return "Capacitacion [identificador=" + identificador + ", cantidadAsistentes=" + cantidadAsistentes
+					+ ", rut=" + rut + ", dia=" + dia + ", lugar=" + lugar + ", duracion=" + duracion + ", hora=" + hora
+					+ "]";
+		}
+
 	}
-}
 
 
 
