@@ -6,7 +6,7 @@ import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Main {
-	
+
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		Cliente cliente;
@@ -159,11 +159,12 @@ public class Main {
 				System.out.println("Ingrese la cantidad de asistentes a la capacitación");
 				cantidadAsistentes=sc.nextInt();
 				sc.nextLine();
+				capacitacion.setCantidadAsistentes(cantidadAsistentes);
 				contenedor.almacenarCapacitacion(capacitacion);
 				opcion=desplegarMenu();
 				break;
 			case 5:
-				System.out.println("Ingrese un rut para eliminar");	
+				System.out.println("Ingrese un rut para eliminar");
 				run=sc.nextInt();
 				sc.nextLine();
 				contenedor.eliminarUsuario(run);
@@ -185,17 +186,17 @@ public class Main {
 				contenedor.listarCapacitaciones();
 				opcion=desplegarMenu();
 				break;
-			case 9: 
+			case 9:
 				System.out.println("Finalizando programa");
 				System.exit(0);
 		}
 		} while (opcion!=9);
 	}
-	
+
 	private static int desplegarMenu() {
 		Scanner sc=new Scanner(System.in);
 		int opcion;
-		
+
 		System.out.println("----------MENU PRINCIPAL----------\n");
 		System.out.println("1- Almacenar cliente");
 		System.out.println("2- Almacenar profesional");
@@ -211,5 +212,5 @@ public class Main {
 		sc.nextLine();
 		return opcion;
 	}
-	
+
 }
