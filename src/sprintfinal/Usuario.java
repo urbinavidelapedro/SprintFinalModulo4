@@ -1,5 +1,6 @@
 package sprintfinal;
 
+import java.math.BigInteger;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Scanner;
@@ -11,7 +12,6 @@ public class Usuario implements IAsesoria{
 	Scanner sc = new Scanner(System.in);
 	
 	public Usuario(String nombre, String apellido, LocalDate fechaNacimiento, int run) {
-		int dia,mes,año;
 		while(nombre.length()<10 || nombre.length()>50) {
 			System.out.println("Ingrese un nombre de usuario entre 10 y 50 caracteres");
 			nombre=sc.nextLine();
@@ -58,7 +58,11 @@ public class Usuario implements IAsesoria{
 	}
 
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		while(nombre.length()<10 || nombre.length()>50) {
+			System.out.println("Ingrese un nombre de usuario entre 10 y 50 caracteres");
+			nombre=sc.nextLine();
+		}
+		this.nombre=nombre;
 	}
 
 	public String getApellido() {
@@ -66,7 +70,11 @@ public class Usuario implements IAsesoria{
 	}
 
 	public void setApellido(String apellido) {
-		this.apellido = apellido;
+		while(apellido.length()<5 || apellido.length()>30) {
+			System.out.println("Ingrese un apellido entre 10 y 50 caracteres");
+			apellido=sc.nextLine();
+		}
+		this.apellido=apellido;
 	}
 
 	public int getRun() {
@@ -74,7 +82,12 @@ public class Usuario implements IAsesoria{
 	}
 
 	public void setRun(int run) {
-		this.run = run;
+		while(run>99999999) {
+			System.out.println("Ingrese un rut válido");
+			run=sc.nextInt();
+			sc.nextLine();
+		}
+		this.run=run;
 	}
 
 	public LocalDate getFechaNacimiento() {

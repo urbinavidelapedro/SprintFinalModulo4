@@ -1,5 +1,6 @@
 package sprintfinal;
 
+import java.math.BigInteger;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Scanner;
@@ -11,11 +12,12 @@ public class Main {
 		Cliente cliente;
 		Profesional profesional;
 		Capacitacion capacitacion;
+		Administrativo administrativo;
 		Contenedor contenedor = new Contenedor();
-		String nombre,apellido,tipoUsuario,telefono,direccion,comuna,afp,rutCapacitacion,diaCapacitacion,duracionCapacitacion,lugarCapacitacion,titulo,fechaIngreso;
+		String nombre,apellido,tipoUsuario,telefono,direccion,comuna,afp,rutCapacitacion,diaCapacitacion,duracionCapacitacion,lugarCapacitacion,titulo,fechaIngreso,area,experienciaPrevia;
 		LocalDate fechaNacimiento;
 		LocalTime hora, horaCapacitacion;
-		int opcion,run,dia,mes,año,sistemaSalud,edad,identificador,cantidadAsistentes;
+		int opcion,dia,mes,año,run,sistemaSalud,edad,identificador,cantidadAsistentes;
 		opcion=desplegarMenu();
 		do {
 			switch(opcion) {
@@ -100,8 +102,36 @@ public class Main {
 				opcion=desplegarMenu();
 				break;
 			case 3:
+				administrativo = new Administrativo();
 				System.out.println("Almacenando administrativo");
-				contenedor.almacenarAdministrativo(null);
+				System.out.println("Ingrese un nombre");
+				nombre=sc.nextLine();
+				administrativo.setNombre(nombre);
+				System.out.println("Ingrese un apellido");
+				apellido=sc.nextLine();
+				administrativo.setApellido(apellido);
+				System.out.println("Ingrese un rut");
+				run=sc.nextInt();
+				sc.nextLine();
+				administrativo.setRun(run);
+				System.out.println("Fecha de nacimiento");
+				System.out.println("Ingrese un día");
+				dia=sc.nextInt();
+				sc.nextLine();
+				System.out.println("Ingrese un mes");
+				mes=sc.nextInt();
+				sc.nextLine();
+				System.out.println("Ingrese un año");
+				año=sc.nextInt();
+				sc.nextLine();
+				administrativo.setFechaNacimiento(dia,mes,año);
+				System.out.println("Ingrese el Area");
+				area=sc.nextLine();
+				administrativo.setArea(area);
+				System.out.println("Ingrese la Experiencia Previa");
+				experienciaPrevia=sc.nextLine();
+				administrativo.setExperienciaPrevia(experienciaPrevia);
+				contenedor.almacenarAdministrativo(administrativo);
 				opcion=desplegarMenu();
 				break;
 			case 4:
@@ -117,7 +147,7 @@ public class Main {
 				System.out.println("Ingrese el día de la capacitación");
 				diaCapacitacion=sc.nextLine();
 				capacitacion.setDia(diaCapacitacion);
-				System.out.println("Ingrese a que hora es la capacitación");
+				System.out.println("Ingrese a que hora es la capacitación (hh:mm)");
 				horaCapacitacion=LocalTime.parse(sc.nextLine());
 				capacitacion.setHora(horaCapacitacion);
 				System.out.println("Ingrese donde va a ser la capacitación");

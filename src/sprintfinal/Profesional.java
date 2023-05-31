@@ -17,7 +17,6 @@ public class Profesional extends Usuario{
 		this.fechaIngreso=fechaIngreso;
 		// TODO Auto-generated constructor stub
 	}
-
 	
 	public void analizarUsuario() {
 		super.analizarUsuario();
@@ -44,11 +43,7 @@ public class Profesional extends Usuario{
 		this.fechaIngreso = fechaIngreso;
 	}
 
-
-	@Override
-	public String toString() {
-		return super.toString();
+	public String listarProfesional() {
+		return super.toString()+" Profesional [titulo=" + titulo + ", fechaIngreso=" + fechaIngreso + "]";
 	}
-	
-	
 }

@@ -132,5 +132,10 @@ public class Cliente extends Usuario{
 		}
 	}
 	
+	public String listarCliente() {
+		return super.toString()+"Cliente [telefono=" + telefono + ", afp=" + afp + ", direccion=" + direccion + ", comuna=" + comuna
+				+ ", sistemaSalud=" + sistemaSalud + ", edad=" + edad + "]";
+	}
+	
 	
 }
