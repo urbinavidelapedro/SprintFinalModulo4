@@ -104,7 +104,9 @@ public class Contenedor {
 	}
 	
 	public void listarCapacitaciones() {
-		for (Capacitacion capacitacion : capacitaciones) {
+		if(capacitaciones.size() <= 0) {
+			System.out.println("No se han ingresado capacitaciones");
+		}else for (Capacitacion capacitacion : capacitaciones) {
 			System.out.println(capacitacion.toString());
 		}
 	}

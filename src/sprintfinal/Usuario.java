@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Usuario implements IAsesoria{
 	String nombre, apellido;
-	int run, dia, mes, año;
+	int run, dia, mes, anio;
 	LocalDate fechaNacimiento;
 	Scanner sc = new Scanner(System.in);
 	
@@ -28,7 +28,7 @@ public class Usuario implements IAsesoria{
 	
 	public void mostrarEdad() {
 		Period periodo = Period.between(fechaNacimiento, LocalDate.now());
-		System.out.println("El usuario tiene " + periodo.getYears()+" años");
+		System.out.println("El usuario tiene " + periodo.getYears()+" anios");
 	}
 
 	public String getNombre() {
@@ -72,7 +72,7 @@ public class Usuario implements IAsesoria{
 		return fechaNacimiento;
 	}
 
-	public void setFechaNacimiento(int dia, int mes, int año) {
+	public void setFechaNacimiento(int dia, int mes, int anio) {
 		while (dia>31 && dia<1) {
 			System.out.println("Ingrese un día válido");
 			dia=sc.nextInt();
@@ -83,12 +83,12 @@ public class Usuario implements IAsesoria{
 			dia=sc.nextInt();
 			sc.nextLine();
 		}
-		while (año<0 && año>2023) {
-			System.out.println("Ingrese un año válido");
-			año=sc.nextInt();
+		while (anio<0 && anio>2023) {
+			System.out.println("Ingrese un anio válido");
+			anio=sc.nextInt();
 			sc.nextLine();
 		}
-		this.fechaNacimiento=LocalDate.of(año, mes, dia);
+		this.fechaNacimiento=LocalDate.of(anio, mes, dia);
 	}
 
 	@Override

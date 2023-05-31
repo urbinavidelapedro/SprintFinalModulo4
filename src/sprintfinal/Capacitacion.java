@@ -139,9 +139,9 @@ public class Capacitacion {
 
 	@Override
 	public String toString() {
-			return "Capacitacion [identificador=" + identificador + ", cantidadAsistentes=" + cantidadAsistentes
-					+ ", rut=" + rut + ", dia=" + dia + ", lugar=" + lugar + ", duracion=" + duracion + ", hora=" + hora
-					+ "]";
+		return "Capacitacion [identificador=" + identificador + ", cantidadAsistentes=" + cantidadAsistentes
+				+ ", rut=" + rut + ", dia=" + dia + ", lugar=" + lugar + ", duracion=" + duracion + ", hora=" + hora
+				+ "]";
 	}
 }
 

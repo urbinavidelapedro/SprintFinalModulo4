@@ -16,7 +16,7 @@ public class Main {
 		Contenedor contenedor = new Contenedor();
 		String nombre,apellido,tipoUsuario,telefono,direccion,comuna,afp,rutCapacitacion,diaCapacitacion,duracionCapacitacion,lugarCapacitacion,titulo,area,experienciaPrevia;
 		LocalTime horaCapacitacion;
-		int opcion,rut,dia,mes,año,run,sistemaSalud,edad,identificador,cantidadAsistentes;
+		int opcion,rut,dia,mes,anio,run,sistemaSalud,edad,identificador,cantidadAsistentes;
 		opcion=desplegarMenu();
 		do {
 			switch(opcion) {
@@ -40,10 +40,10 @@ public class Main {
 				System.out.println("Ingrese un mes (1-12)");
 				mes=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese un año (mayor a 0 y menor que el año actual)");
-				año=sc.nextInt();
+				System.out.println("Ingrese un anio (mayor a 0 y menor que el anio actual)");
+				anio=sc.nextInt();
 				sc.nextLine();
-				cliente.setFechaNacimiento(dia,mes,año);
+				cliente.setFechaNacimiento(dia,mes,anio);
 				System.out.println("Ingrese el rut del cliente");
 				rut = sc.nextInt();
 				sc.nextLine();
@@ -91,10 +91,10 @@ public class Main {
 				System.out.println("Ingrese un mes");
 				mes=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese un año");
-				año=sc.nextInt();
+				System.out.println("Ingrese un anio");
+				anio=sc.nextInt();
 				sc.nextLine();
-				profesional.setFechaNacimiento(dia,mes,año);
+				profesional.setFechaNacimiento(dia,mes,anio);
 				System.out.println("Ingrese el título del profesional");
 				titulo=sc.nextLine();
 				profesional.setTitulo(titulo);
@@ -105,10 +105,10 @@ public class Main {
 				System.out.println("Ingrese el mes (1-12)");
 				mes=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese el año (mayor a 0 y menor o igual al año actual)");
-				año=sc.nextInt();
+				System.out.println("Ingrese el anio (mayor a 0 y menor o igual al anio actual)");
+				anio=sc.nextInt();
 				sc.nextLine();
-				profesional.setFechaIngreso(dia,mes,año);
+				profesional.setFechaIngreso(dia,mes,anio);
 				contenedor.almacenarProfesional(profesional);
 				opcion=desplegarMenu();
 				break;
@@ -132,10 +132,10 @@ public class Main {
 				System.out.println("Ingrese un mes");
 				mes=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese un año");
-				año=sc.nextInt();
+				System.out.println("Ingrese un anio");
+				anio=sc.nextInt();
 				sc.nextLine();
-				administrativo.setFechaNacimiento(dia,mes,año);
+				administrativo.setFechaNacimiento(dia,mes,anio);
 				System.out.println("Ingrese el Area");
 				area=sc.nextLine();
 				administrativo.setArea(area);

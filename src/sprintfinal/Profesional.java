@@ -41,8 +41,8 @@ public class Profesional extends Usuario{
 	}
 
 
-	public void setFechaIngreso(int dia, int mes, int año) {
-		this.fechaIngreso=LocalDate.of(dia, mes, año);
+	public void setFechaIngreso(int dia, int mes, int anio) {
+		this.fechaIngreso=LocalDate.of(dia, mes, anio);
 	}
 
 	public String listarProfesional() {
