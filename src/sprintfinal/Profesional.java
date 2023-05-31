@@ -4,18 +4,18 @@ import java.time.LocalDate;
 
 public class Profesional extends Usuario{
 	
-	String titulo, fechaIngreso;
+	String titulo;
+	LocalDate fechaIngreso;
 	
 	public Profesional() {
 		
 	}
 
 
-	public Profesional(String nombre, String apellido, LocalDate fechaNacimiento, int run, String titulo, String fechaIngreso) {
+	public Profesional(String nombre, String apellido, LocalDate fechaNacimiento, int run, String titulo, LocalDate fechaIngreso) {
 		super(nombre, apellido, fechaNacimiento, run);
 		this.titulo=titulo;
 		this.fechaIngreso=fechaIngreso;
-		// TODO Auto-generated constructor stub
 	}
 	
 	public void analizarUsuario() {
@@ -23,24 +23,26 @@ public class Profesional extends Usuario{
 		System.out.println("Título: "+ titulo + ", Fecha ingreso: " + fechaIngreso + "\n");
 	}
 
-
 	public String getTitulo() {
 		return titulo;
 	}
 
-
 	public void setTitulo(String titulo) {
+		while(titulo.length()<10 || titulo.length()>50) {
+			System.out.println("El título debe tener entre 10 y 50 caracteres");
+			titulo=sc.nextLine();
+		}
 		this.titulo = titulo;
 	}
 
 
-	public String getFechaIngreso() {
+	public LocalDate getFechaIngreso() {
 		return fechaIngreso;
 	}
 
 
-	public void setFechaIngreso(String fechaIngreso) {
-		this.fechaIngreso = fechaIngreso;
+	public void setFechaIngreso(int dia, int mes, int año) {
+		this.fechaIngreso=LocalDate.of(dia, mes, año);
 	}
 
 	public String listarProfesional() {

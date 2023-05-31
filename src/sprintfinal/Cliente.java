@@ -6,12 +6,13 @@ import java.util.Scanner;
 public class Cliente extends Usuario{
 	private String telefono, afp, direccion, comuna;
 	private int sistemaSalud, edad;
+	private int rut;
 	
 
 	public Cliente () {
 		
 	}
-	public Cliente(String nombre, String apellido, LocalDate fechaNacimiento,int run, String telefono,
+	public Cliente(String nombre, String apellido, LocalDate fechaNacimiento,int run,int rut, String telefono,
 			String afp, int sistemaSalud, String direccion, String comuna, int edad) {
 		super(nombre, apellido, fechaNacimiento,run);
 		this.telefono=telefono;
@@ -19,6 +20,7 @@ public class Cliente extends Usuario{
 		this.direccion=direccion;
 		this.comuna=comuna;
 		this.edad=edad;
+		this.rut=rut;
 	}
 	
 	public String getTelefono() {
@@ -79,6 +81,19 @@ public class Cliente extends Usuario{
 			edad = sc.nextInt();
 		}
 		this.edad = edad;
+		
+			
+	}
+	public int getRut() {
+		return rut;
+	}
+	public void setRut(int rut) {
+		while(run>99999999) {
+			System.out.println("Ingrese un rut válido");
+			run=sc.nextInt();
+			sc.nextLine();
+		}
+		this.rut = rut;
 	}
 	@Override
 	public void analizarUsuario() {

@@ -1,7 +1,7 @@
 package sprintfinal;
 
-import java.math.BigInteger;
-import java.time.LocalDate;
+
+
 import java.time.LocalTime;
 import java.util.Scanner;
 
@@ -14,10 +14,9 @@ public class Main {
 		Capacitacion capacitacion;
 		Administrativo administrativo;
 		Contenedor contenedor = new Contenedor();
-		String nombre,apellido,tipoUsuario,telefono,direccion,comuna,afp,rutCapacitacion,diaCapacitacion,duracionCapacitacion,lugarCapacitacion,titulo,fechaIngreso,area,experienciaPrevia;
-		LocalDate fechaNacimiento;
-		LocalTime hora, horaCapacitacion;
-		int opcion,dia,mes,año,run,sistemaSalud,edad,identificador,cantidadAsistentes;
+		String nombre,apellido,tipoUsuario,telefono,direccion,comuna,afp,rutCapacitacion,diaCapacitacion,duracionCapacitacion,lugarCapacitacion,titulo,area,experienciaPrevia;
+		LocalTime horaCapacitacion;
+		int opcion,rut,dia,mes,año,run,sistemaSalud,edad,identificador,cantidadAsistentes;
 		opcion=desplegarMenu();
 		do {
 			switch(opcion) {
@@ -30,21 +29,25 @@ public class Main {
 				System.out.println("Ingrese un apellido");
 				apellido=sc.nextLine();
 				cliente.setApellido(apellido);
-				System.out.println("Ingrese un rut");
+				System.out.println("Ingrese un run");
 				run=sc.nextInt();
 				sc.nextLine();
 				cliente.setRun(run);
 				System.out.println("Fecha de nacimiento");
-				System.out.println("Ingrese un día");
+				System.out.println("Ingrese un día (1-31)");
 				dia=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese un mes");
+				System.out.println("Ingrese un mes (1-12)");
 				mes=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese un año");
+				System.out.println("Ingrese un año (mayor a 0 y menor que el año actual)");
 				año=sc.nextInt();
 				sc.nextLine();
 				cliente.setFechaNacimiento(dia,mes,año);
+				System.out.println("Ingrese el rut del cliente");
+				rut = sc.nextInt();
+				sc.nextLine();
+				cliente.setRut(rut);
 				System.out.println("Ingrese un teléfono");
 				telefono=sc.nextLine();
 				cliente.setTelefono(telefono);
@@ -77,7 +80,7 @@ public class Main {
 				System.out.println("Ingrese un apellido");
 				apellido=sc.nextLine();
 				profesional.setApellido(apellido);
-				System.out.println("Ingrese un rut");
+				System.out.println("Ingrese un run");
 				run=sc.nextInt();
 				profesional.setRun(run);
 				sc.nextLine();
@@ -96,8 +99,16 @@ public class Main {
 				titulo=sc.nextLine();
 				profesional.setTitulo(titulo);
 				System.out.println("Ingrese la fecha de ingreso del profesional");
-				fechaIngreso=sc.nextLine();
-				profesional.setFechaIngreso(fechaIngreso);
+				System.out.println("Ingrese el día (1-31)");
+				dia=sc.nextInt();
+				sc.nextLine();
+				System.out.println("Ingrese el mes (1-12)");
+				mes=sc.nextInt();
+				sc.nextLine();
+				System.out.println("Ingrese el año (mayor a 0 y menor o igual al año actual)");
+				año=sc.nextInt();
+				sc.nextLine();
+				profesional.setFechaIngreso(dia,mes,año);
 				contenedor.almacenarProfesional(profesional);
 				opcion=desplegarMenu();
 				break;
@@ -159,6 +170,7 @@ public class Main {
 				System.out.println("Ingrese la cantidad de asistentes a la capacitación");
 				cantidadAsistentes=sc.nextInt();
 				sc.nextLine();
+				capacitacion.setCantidadAsistentes(cantidadAsistentes);
 				contenedor.almacenarCapacitacion(capacitacion);
 				opcion=desplegarMenu();
 				break;
