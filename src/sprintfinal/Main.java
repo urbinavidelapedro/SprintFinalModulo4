@@ -62,7 +62,7 @@ public class Main {
 				System.out.println("Ingrese AFP");
 				afp=sc.nextLine();
 				cliente.setAfp(afp);
-				System.out.println("Ingrese sistema de salud");
+				System.out.println("Ingrese sistema de salud (1 Fonasa 2 Isapre)");
 				sistemaSalud=sc.nextInt();
 				sc.nextLine();
 				cliente.setSistemaSalud(sistemaSalud);
