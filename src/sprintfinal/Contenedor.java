@@ -3,6 +3,12 @@ package sprintfinal;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * Clase Contenedor, genera objeto de tipo contenedor, contiene las lista de usuario y capacitaciones
+ * ademas de los métodos requeridos en la clase principal main. 
+ * 
+ */
 public class Contenedor {
 	private List<IAsesoria> usuarios = new ArrayList<>();
 	private List<Capacitacion> capacitaciones=new ArrayList<>();

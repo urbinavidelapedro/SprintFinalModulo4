@@ -5,6 +5,11 @@ import java.text.Normalizer;
 import java.time.LocalTime;
 import java.util.Scanner;
 
+/**
+ * 
+ * Clase Capacitación, genera objeto de tipo capacitación, constructor vacio y con parámetros  y métodos setter con sus respectivas validaciones y getter.  
+ * 
+ */
 public class Capacitacion {
 	int cantidadAsistentes, identificador;
 	String rut,dia,lugar,duracion;
@@ -132,12 +137,15 @@ public class Capacitacion {
 	}
 
 	public void setHora(LocalTime horaCapacitacion) {
-		
-	            this.hora = horaCapacitacion;
-	   } 
-	        
-	
-
+		this.hora = horaCapacitacion;
+	} 
+	      
+	/**
+	 * 
+	 * Método al ser usado imprimer detalles de objeto del tipo capacitación. 
+	 * @return tipo void
+	 * 
+	 */
 	public void mostrarDetalle() {
 	System.out.println("La capacitación será en "+lugar+" a las "+hora+" del día "+dia+"y durará "+duracion+" minutos");
 	}

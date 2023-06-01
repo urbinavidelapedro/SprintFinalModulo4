@@ -2,6 +2,12 @@ package sprintfinal;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * Clase Revision, genera objeto de tipo revision, 
+ * constructor vacio y con parámetros con sus respectivas validaciones  y métodos setter y getter. 
+ * 
+ */
 public class Revision {
 	
 	private int idRevision;

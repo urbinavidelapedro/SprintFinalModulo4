@@ -6,7 +6,11 @@ import java.time.LocalTime;
 import java.util.Scanner;
 import java.util.Date;
 
-
+/**
+ * 
+ * Clase Accidente, genera objeto de tipo accidente. 
+ * 
+ */
 public class Accidente {
 	private int idAccidente;
 	private String rutCliente, lugar, origen, consecuencias;

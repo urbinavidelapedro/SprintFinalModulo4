@@ -1,13 +1,17 @@
 package sprintfinal;
 
-
-
 import java.time.LocalTime;
 import java.util.Scanner;
+
+//Sprint final modulo 4
+
 /**
  * 
- * Implementación del código, se ejecuta la función de la 
- * 
+ * Clase main, definida para generar instancias que son requeridas en la clase contenedor ademas de un menu de interacción con el usuario. 
+ * @autor: Lino Cortes
+ * @autor: Sergio Morales
+ * @autor: Felipe Toro
+ * @autor: Pedro Urbina
  */
 public class Main {
 
@@ -33,7 +37,7 @@ public class Main {
 				System.out.println("Ingrese un apellido");
 				apellido=sc.nextLine();
 				cliente.setApellido(apellido);
-				System.out.println("Ingrese un run");
+				System.out.println("Ingrese un run en formato númerico");
 				run=sc.nextInt();
 				sc.nextLine();
 				cliente.setRun(run);
@@ -48,7 +52,7 @@ public class Main {
 				anio=sc.nextInt();
 				sc.nextLine();
 				cliente.setFechaNacimiento(dia,mes,anio);
-				System.out.println("Ingrese el rut del cliente");
+				System.out.println("Ingrese el rut del cliente en formato númerico");
 				rut = sc.nextInt();
 				sc.nextLine();
 				cliente.setRut(rut);
@@ -84,7 +88,7 @@ public class Main {
 				System.out.println("Ingrese un apellido");
 				apellido=sc.nextLine();
 				profesional.setApellido(apellido);
-				System.out.println("Ingrese un run");
+				System.out.println("Ingrese un run en formato númerico");
 				run=sc.nextInt();
 				profesional.setRun(run);
 				sc.nextLine();
@@ -125,18 +129,18 @@ public class Main {
 				System.out.println("Ingrese un apellido");
 				apellido=sc.nextLine();
 				administrativo.setApellido(apellido);
-				System.out.println("Ingrese un rut (valor numérico)");
+				System.out.println("Ingrese un rut en formato númerico");
 				run=sc.nextInt();
 				sc.nextLine();
 				administrativo.setRun(run);
 				System.out.println("Fecha de nacimiento");
-				System.out.println("Ingrese un día (1-31)");
+				System.out.println("Ingrese un día");
 				dia=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese un mes (1-12)");
+				System.out.println("Ingrese un mes");
 				mes=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese un año (>0)");
+				System.out.println("Ingrese un anio");
 				anio=sc.nextInt();
 				sc.nextLine();
 				administrativo.setFechaNacimiento(dia,mes,anio);
@@ -156,7 +160,7 @@ public class Main {
 				identificador=sc.nextInt();
 				sc.nextLine();
 				capacitacion.setIdentificador(identificador);
-				System.out.println("Ingrese el rut (valor numérico)");
+				System.out.println("Ingrese el rut");
 				rutCapacitacion=sc.nextLine();
 				capacitacion.setRut(rutCapacitacion);
 				System.out.println("Ingrese el día de la capacitación (Lunes, Martes, Miércoles, Jueves, Viernes, Sábado o Domingo)");
@@ -168,7 +172,7 @@ public class Main {
 				System.out.println("Ingrese donde va a ser la capacitación");
 				lugarCapacitacion=sc.nextLine();
 				capacitacion.setLugar(lugarCapacitacion);
-				System.out.println("Ingrese la duracion de la capacitacion en minutos");
+				System.out.println("Ingrese la duracion de la capacitacion en minutos (formato númerico)");
 				duracionCapacitacion=sc.nextLine();
 				capacitacion.setDuracion(duracionCapacitacion);
 				System.out.println("Ingrese la cantidad de asistentes a la capacitación");
@@ -207,7 +211,13 @@ public class Main {
 		}
 		} while (opcion!=9);
 	}
-
+	
+	/**
+	 * 
+	 * Métdo estatico que despliega en consola el menú.
+	 * @return tipo int. 
+	 * 
+	 */
 	private static int desplegarMenu() {
 		Scanner sc=new Scanner(System.in);
 		int opcion;

@@ -2,6 +2,12 @@ package sprintfinal;
 
 import java.time.LocalDate;
 
+/**
+ * 
+ * Clase Profesional, genera objeto de tipo profesional, 
+ * constructor vacio y con parámetros  y métodos setter con sus respectivas validaciones y getter y listar profesional. 
+ * 
+ */
 public class Profesional extends Usuario{
 	
 	String titulo;
@@ -35,16 +41,20 @@ public class Profesional extends Usuario{
 		this.titulo = titulo;
 	}
 
-
 	public LocalDate getFechaIngreso() {
 		return fechaIngreso;
 	}
 
-
 	public void setFechaIngreso(int dia, int mes, int anio) {
 		this.fechaIngreso=LocalDate.of(dia, mes, anio);
 	}
-
+	
+	/**
+	 * 
+	 * Método que al ser usado imprime datos del profesional. 
+	 * @return tipo void
+	 * 
+	 */
 	public String listarProfesional() {
 		return super.toString()+" Profesional [titulo=" + titulo + ", fechaIngreso=" + fechaIngreso + "]";
 	}

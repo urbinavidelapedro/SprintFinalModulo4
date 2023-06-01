@@ -5,6 +5,12 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.Scanner;
 
+/**
+ * 
+ * Clase usuario, genera objeto de tipo usuario, el cual implementa interfaz, 
+ * constructor vacio y con parámetros  y métodos setter con sus respectivas validaciones y getter. 
+ * 
+ */
 public class Usuario implements IAsesoria{
 	String nombre, apellido;
 	int run, dia, mes, anio;
@@ -22,6 +28,12 @@ public class Usuario implements IAsesoria{
 		
 	}
 	
+	/**
+	 * 
+	 * Metodo sobreescrito que es obligatorio implementar por la interfaz.
+	 * @return tipo void 
+	 * 
+	 */
 	public void analizarUsuario() {
 		System.out.println("Nombre usuario: "+nombre+", RUN: "+run);
 	}
