@@ -8,24 +8,39 @@ import java.util.Scanner;
 /**
  * 
  * Clase main, definida para generar instancias que son requeridas en la clase contenedor ademas de un menu de interacción con el usuario. 
- * @autor: Lino Cortes
- * @autor: Sergio Morales
- * @autor: Felipe Toro
- * @autor: Pedro Urbina
+ * @autor Lino Cortes
+ * @autor Sergio Morales
+ * @autor Felipe Toro
+ * @autor Pedro Urbina
+ * 
  */
-public class Main {
 
+
+public class Main {
+	/**
+	 * Método principal de ejecucion del despliegue del menu e ingreso de datos.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		Cliente cliente;
 		Profesional profesional;
 		Capacitacion capacitacion;
 		Administrativo administrativo;
+		/*
+		 * Se llama una nueva instancia de Contenedor 
+		 */
 		Contenedor contenedor = new Contenedor();
 		String nombre,apellido,tipoUsuario,telefono,direccion,comuna,afp,rutCapacitacion,diaCapacitacion,duracionCapacitacion,lugarCapacitacion,titulo,area,experienciaPrevia;
 		LocalTime horaCapacitacion;
 		int opcion,rut,dia,mes,anio,run,sistemaSalud,edad,identificador,cantidadAsistentes;
+		
+		
+		/**
+		 * Despliega el menu
+		 */
 		opcion=desplegarMenu();
+		
 		do {
 			switch(opcion) {
 			case 1:
@@ -216,7 +231,7 @@ public class Main {
 	/**
 	 * 
 	 * Métdo estatico que despliega en consola el menú.
-	 * @return De tipo int, retorna la opción seleccionada 
+	 * @return De tipo entero, retorna la opción del menu al cual deseamos acceder. 
 	 * 
 	 */
 	private static int desplegarMenu() {
