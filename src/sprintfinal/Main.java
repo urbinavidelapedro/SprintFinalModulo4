@@ -216,7 +216,7 @@ public class Main {
 	/**
 	 * 
 	 * Métdo estatico que despliega en consola el menú.
-	 * @return tipo int. 
+	 * @return De tipo int, retorna la opción seleccionada 
 	 * 
 	 */
 	private static int desplegarMenu() {
