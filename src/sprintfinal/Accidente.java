@@ -70,7 +70,7 @@ public class Accidente {
 	}
 
 	/**
-	 * Constructor de accidente vacio
+	 * Constructor de accidente vacío
 	 */
 	public Accidente() {
 		super();
