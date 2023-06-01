@@ -6,7 +6,7 @@ import java.time.LocalTime;
 import java.util.Scanner;
 /**
  * 
- * Implementación del código
+ * Implementación del código, se ejecuta la función de la 
  * 
  */
 public class Main {

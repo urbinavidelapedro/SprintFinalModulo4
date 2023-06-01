@@ -2,19 +2,21 @@ package sprintfinal;
 
 
 import java.text.Normalizer;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Capacitacion {
-	int cantidadAsistentes;
-	String rut,dia,lugar,duracion,identificador,hora;
+	int cantidadAsistentes,identificador;
+	String rut,dia,lugar,duracion,hora;
 	Scanner sc = new Scanner(System.in);
+	LocalTime horaCapacitacion;
 
 	public Capacitacion () {
 
 	}
 
 	public Capacitacion(int cantidadAsistentes, String rut, String dia, String lugar, String duracion,
-			String identificador, String hora) {
+			int identificador, String hora) {
 		super();
 		this.cantidadAsistentes = cantidadAsistentes;
 		this.rut = rut;
@@ -25,20 +27,12 @@ public class Capacitacion {
 		this.hora = hora;
 	}
 
-	public String getIdentificador() {
+	public int getIdentificador() {
 		return identificador;
 	}
 
-	public void setIdentificador(String identificador) {
-	    while (true) {
-	        if (identificador.matches("\\d+")) {
-	            this.identificador = identificador;
-	            break;
-	        } else {
-	            System.out.println("El identificador debe ser un número entero. Ingréselo nuevamente: ");
-	            identificador = sc.nextLine();
-	        }
-	    }
+	public void setIdentificador(int identificador) {
+	    this.identificador=identificador;
 	}
 	
 	public int getCantidadAsistentes() {
@@ -64,7 +58,7 @@ public class Capacitacion {
 	}
 
 	public void setRut(String rut) {
-		while(rut.isEmpty()) {
+		while(rut==null) {
 			System.out.println("El campo rut es obligatorio ingresalo denuevo por favor");
 			rut=sc.nextLine();
 		}
@@ -130,20 +124,12 @@ public class Capacitacion {
 		return hora;
 	}
 
-	public void setHora(String hora) {
-	    while (true) {
-	        if (hora.matches("^([01]?\\d|2[0-3]):[0-5]\\d$")) {
-	            this.hora = hora;
-	            break;
-	        } else {
-	            System.out.println("El formato de hora debe ser HH:MM. Ingréselo nuevamente: ");
-	            hora = sc.nextLine();
-	        }
-	    }
+	public void setHora(LocalTime horaCapacitacion) {
+	    this.horaCapacitacion=horaCapacitacion;
 	}
 
 	public void mostrarDetalle() {
-	System.out.println("La capacitación será en "+lugar+" a las "+hora+" del día "+dia+"y durará "+duracion+" minutos");
+		System.out.println("La capacitación será en "+lugar+" a las "+hora+" del día "+dia+"y durará "+duracion+" minutos");
 	}
 
 	@Override
