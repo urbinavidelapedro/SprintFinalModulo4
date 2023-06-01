@@ -6,17 +6,17 @@ import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Capacitacion {
-	int cantidadAsistentes,identificador;
-	String rut,dia,lugar,duracion,hora;
+	int cantidadAsistentes, identificador;
+	String rut,dia,lugar,duracion;
+	LocalTime hora;
 	Scanner sc = new Scanner(System.in);
-	LocalTime horaCapacitacion;
 
 	public Capacitacion () {
 
 	}
 
 	public Capacitacion(int cantidadAsistentes, String rut, String dia, String lugar, String duracion,
-			int identificador, String hora) {
+			int identificador, LocalTime hora) {
 		super();
 		this.cantidadAsistentes = cantidadAsistentes;
 		this.rut = rut;
@@ -32,8 +32,15 @@ public class Capacitacion {
 	}
 
 	public void setIdentificador(int identificador) {
-	    this.identificador=identificador;
-	}
+				if (identificador != 0) {
+	            this.identificador = identificador;
+	            
+	        } else {
+	            System.out.println("El identificador debe ser un número entero. Ingréselo nuevamente: ");
+	            identificador = sc.nextInt();
+	        }
+	    }
+	
 	
 	public int getCantidadAsistentes() {
 		return cantidadAsistentes;
@@ -58,7 +65,7 @@ public class Capacitacion {
 	}
 
 	public void setRut(String rut) {
-		while(rut==null) {
+		while(rut.isEmpty()) {
 			System.out.println("El campo rut es obligatorio ingresalo denuevo por favor");
 			rut=sc.nextLine();
 		}
@@ -120,16 +127,19 @@ public class Capacitacion {
 		this.duracion=duracion;
 	}
 	
-	public String getHora() {
+	public LocalTime getHora() {
 		return hora;
 	}
 
 	public void setHora(LocalTime horaCapacitacion) {
-	    this.horaCapacitacion=horaCapacitacion;
-	}
+		
+	            this.hora = horaCapacitacion;
+	   } 
+	        
+	
 
 	public void mostrarDetalle() {
-		System.out.println("La capacitación será en "+lugar+" a las "+hora+" del día "+dia+"y durará "+duracion+" minutos");
+	System.out.println("La capacitación será en "+lugar+" a las "+hora+" del día "+dia+"y durará "+duracion+" minutos");
 	}
 
 	@Override
