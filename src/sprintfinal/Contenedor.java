@@ -12,32 +12,53 @@ import java.util.List;
 public class Contenedor {
 	private List<IAsesoria> usuarios = new ArrayList<>();
 	private List<Capacitacion> capacitaciones=new ArrayList<>();
-	
+	/**
+	 * Constructor sin parámetros
+	 */
 	public Contenedor() {
 		
 	}
-
+	/**
+	 * Constructor con todos los atributos de Contenedor como parámetros
+	 * @param usuarios ArrayList que contiene objetos de tipo IAsesoria para almacenar usuarios
+	 * @param capacitaciones ArrayList que contiene objetos de tipo capacitación 
+	 */
 	public Contenedor(List<IAsesoria> usuarios, List<Capacitacion> capacitaciones) {
 		this.usuarios = usuarios;
 		this.capacitaciones = capacitaciones;
 	}
-	
+	/**
+	 * Método que añade un objeto de tipo Cliente a la lista de usuarios
+	 * @param cliente De tipo Cliente, es el cliente que se va a añadir a la lista de usuarios
+	 */
 	public void almacenarCliente(Cliente cliente) {
 		usuarios.add(cliente);
 	}
-	
+	/**
+	 * Método que añade un objeto de tipo Profesional a la lista de usuarios
+	 * @param profesional Objeto Profesional que se añadirá a la lista de usuarios
+	 */
 	public void almacenarProfesional(Profesional profesional) {
 		usuarios.add(profesional);
 	}
-	
+	/**
+	 * Método que añade un objeto de tipo Administrativo a la lista de usuarios
+	 * @param administrativo Objeto Administrativo que se añadirá a la lista de usuarios
+	 */
 	public void almacenarAdministrativo(Administrativo administrativo) {
 		usuarios.add(administrativo);
 	}
-	
+	/**
+	 * Método que almacena una capacitación en la lista de capacitaciones
+	 * @param capacitacion De tipo capacitación, se añadirá en la lista de capacitaciones
+	 */
 	public void almacenarCapacitacion(Capacitacion capacitacion) {
 		capacitaciones.add(capacitacion);
 	}
-	
+	/**
+	 * Método que elimina un usuario de la lista de usuarios
+	 * @param run De tipo int, es el número con el que se identificará el usuario a eliminar
+	 */
 	public void eliminarUsuario(int run) {
 		boolean usuarioEliminado=false;
 		for (Object usuario : usuarios) {
@@ -54,7 +75,9 @@ public class Contenedor {
 		}
 		
 	}
-	
+	/**
+	 * Método que lista los usuarios existentes en la lista de usuarios. Valida además con un mensaje por consola si es que no existen usuarios
+	 */
 	public void listarUsuarios() {
 		if(usuarios.isEmpty()) {
 			System.out.println("No se han ingresado usuarios");
@@ -64,7 +87,11 @@ public class Contenedor {
 			System.out.println(usuario1.toString());
 		}
 	}
-	
+	/**
+	 * 
+	 * Método que lista todos los tipos de usuarios coincidentes con el parámetro entregado
+	 * @param tipoUsuario De tipo String, es la cadena que evaluará que tipo de usuario se tiene que imprimir
+	 */
 	public void listarUsuarioPorTipo(String tipoUsuario) {
 		switch(tipoUsuario) {
 			case "Administrativo":
@@ -108,7 +135,9 @@ public class Contenedor {
 				break;
 		}
 	}
-	
+	/**
+	 * Método que lista las capacitaciones en la lista de capacitaciones. En caso de no haber, imprime el mensaje en pantalla correspondiente
+	 */
 	public void listarCapacitaciones() {
 		if(capacitaciones.size() <= 0) {
 			System.out.println("No se han ingresado capacitaciones");
