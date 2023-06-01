@@ -12,6 +12,9 @@ import java.util.Date;
  * 
  */
 public class Accidente {
+	/**
+	 * 
+	 */
 	
 	private int idAccidente;
 	private String rutCliente, lugar, origen, consecuencias;
@@ -20,7 +23,7 @@ public class Accidente {
 	Scanner sc =  new Scanner(System.in);
 	
 	/**
-	 * 
+	 * Constructor de Accidente con todos los atributos de la clase como parámetros
 	 * @param idAccidente De tipo entero, recibe el numero de identificador del accidente
 	 * @param rutCliente  De tipo String, recibe el rut del cliente
 	 * @param dia		  De tipo LocalDate, recibe el dia del accidente muestra en formato 	
@@ -76,14 +79,14 @@ public class Accidente {
 	
 	
 	/**
-	 * 
+	 * Método que retorna el id del Accidente
 	 * @return Retorna el id del Accidente
 	 */
 	public int getIdAccidente() {
 		return idAccidente;
 	}
 	/**
-	 * 
+	 *Método que recibe el valor de idAccidente
 	 * @param idAccidente toma el valor de idAccidente
 	 */
 
@@ -92,7 +95,7 @@ public class Accidente {
 	}
 	
 	/**
-	 * 
+	 * Método que retorna el rut del cliente
 	 * @return Retorna el rut del cliente
 	 */
 
@@ -101,7 +104,7 @@ public class Accidente {
 	}
 	
 	/**
-	 * 
+	 * Método que recibe el valor de rutCliente
 	 * @param rutCliente recibe el valor de rutCliente 
 	 */
 
@@ -110,7 +113,7 @@ public class Accidente {
 	}
 	
     /**
-     * 
+     * Método que retorna el lugar del accidente
      * @return Retorna el lugar del accidente
      */
 
@@ -118,7 +121,7 @@ public class Accidente {
 		return lugar;
 	}
 	/**
-	 * 
+	 * Método que recibe el valor de lugar
 	 * @param lugar recibe el valor de lugar
 	 */
 
@@ -126,7 +129,7 @@ public class Accidente {
 		this.lugar = lugar;
 	}
 	/**
-	 * 
+	 * Método que retorna el origen del accidente
 	 * @return Retorna el origen del accidente
 	 */
 
@@ -134,7 +137,7 @@ public class Accidente {
 		return origen;
 	}
 	/**
-	 * 
+	 * Método que recibe el valor de origen del accidente
 	 * @param origen recibe el valor de origen
 	 */
 
@@ -143,7 +146,7 @@ public class Accidente {
 	}
 
 	/**
-	 * 
+	 * Método que retorna las consecuencias del accidente
 	 * @return Retorna las consecuencias del accidente
 	 */
 	public String getConsecuencias() {
@@ -151,7 +154,7 @@ public class Accidente {
 	}
 
 	/**
-	 * 
+	 * Método que recibe el valor de consecuencias
 	 * @param consecuencias recibe el valor de consecuencias
 	 */
 	
@@ -160,7 +163,7 @@ public class Accidente {
 	}
 	
 	/**
-	 * 
+	 * Método que retorna el dia del accidente
 	 * @return Retorna el dia del accidente
 	 */
 
@@ -168,7 +171,7 @@ public class Accidente {
 		return dia;
 	}
 	/**
-	 * 
+	 * Método que recibe el valor de dia
 	 * @param dia recibe el valor de dia
 	 */
 
@@ -177,7 +180,7 @@ public class Accidente {
 	}
 	
 	/**
-	 * 
+	 * Método que retorna la hora del accidente
 	 * @return  Retorna la hora del accidente
 	 */
 
@@ -185,18 +188,11 @@ public class Accidente {
 		return hora;
 	}
 	/**
-	 * 
+	 * Método que recibe el valor de hora
 	 * @param hora recibe el valor de hora
 	 */
 
 	public void setHora(LocalTime hora) {
 		this.hora = hora;
 	}
-	
-	
-	
-
-
-	
-	
 }

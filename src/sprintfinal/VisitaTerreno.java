@@ -20,6 +20,15 @@ public class VisitaTerreno {
 	private Scanner sc = new Scanner(System.in); 
 	
 	
+	/**
+	 * 
+	 * @param idVisitaTerreno De tipo entero, recibe el numero de identificacion de la visita a terreno
+	 * @param rutCliente      
+	 * @param lugar
+	 * @param comentarios
+	 * @param dia
+	 * @param hora
+	 */
 	VisitaTerreno(int idVisitaTerreno, String rutCliente, String lugar, String comentarios, LocalDate dia, LocalTime hora) {
 		this.idVisitaTerreno=idVisitaTerreno;
 		while(rutCliente==null) {
