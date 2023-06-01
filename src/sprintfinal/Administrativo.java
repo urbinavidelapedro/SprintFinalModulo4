@@ -3,6 +3,12 @@ package sprintfinal;
 import java.time.LocalDate;
 import java.util.Scanner;
 
+/**
+ * 
+ * Clase Administrativo, genera objeto de tipo administrativo extiende de la clase padre usuario, 
+ * constructor vacio y con parámetros  y métodos setter con sus respectivas validaciones y getter.  
+ * 
+ */
 public class Administrativo extends Usuario{
 	
 	String area, experienciaPrevia;
@@ -42,11 +48,23 @@ public class Administrativo extends Usuario{
 		this.experienciaPrevia=experienciaPrevia;
 	}
 	
+	/**
+	 * 
+	 * Método que imprime datos del administrador.
+	 * @return tipo void  
+	 * 
+	 */
 	public void analizarUsuario() {
 		super.analizarUsuario();
 		System.out.println("Area: "+ area + ", Experiencia previa: " + experienciaPrevia + "\n");
 	}
-
+	
+	/**
+	 * 
+	 * Método que es usado para imprimir datos del administradores.
+	 * @return tipo String  
+	 * 
+	 */
 	public String listarAdministrativo() {
 		return super.toString()+" Administrativo [area=" + area + ", experienciaPrevia=" + experienciaPrevia + "]";
 	}

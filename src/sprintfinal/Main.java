@@ -1,13 +1,17 @@
 package sprintfinal;
 
-
-
 import java.time.LocalTime;
 import java.util.Scanner;
+
+//Sprint final modulo 4
+
 /**
  * 
- * Implementación del código
- * 
+ * Clase main, definida para generar instancias que son requeridas en la clase contenedor ademas de un menu de interacción con el usuario. 
+ * @autor: Lino Cortes
+ * @autor: Sergio Morales
+ * @autor: Felipe Toro
+ * @autor: Pedro Urbina
  */
 public class Main {
 
@@ -33,7 +37,7 @@ public class Main {
 				System.out.println("Ingrese un apellido");
 				apellido=sc.nextLine();
 				cliente.setApellido(apellido);
-				System.out.println("Ingrese un run");
+				System.out.println("Ingrese un run en formato númerico");
 				run=sc.nextInt();
 				sc.nextLine();
 				cliente.setRun(run);
@@ -48,7 +52,7 @@ public class Main {
 				anio=sc.nextInt();
 				sc.nextLine();
 				cliente.setFechaNacimiento(dia,mes,anio);
-				System.out.println("Ingrese el rut del cliente");
+				System.out.println("Ingrese el rut del cliente en formato númerico");
 				rut = sc.nextInt();
 				sc.nextLine();
 				cliente.setRut(rut);
@@ -84,7 +88,7 @@ public class Main {
 				System.out.println("Ingrese un apellido");
 				apellido=sc.nextLine();
 				profesional.setApellido(apellido);
-				System.out.println("Ingrese un run");
+				System.out.println("Ingrese un run en formato númerico");
 				run=sc.nextInt();
 				profesional.setRun(run);
 				sc.nextLine();
@@ -125,7 +129,7 @@ public class Main {
 				System.out.println("Ingrese un apellido");
 				apellido=sc.nextLine();
 				administrativo.setApellido(apellido);
-				System.out.println("Ingrese un rut");
+				System.out.println("Ingrese un rut en formato númerico");
 				run=sc.nextInt();
 				sc.nextLine();
 				administrativo.setRun(run);
@@ -168,7 +172,7 @@ public class Main {
 				System.out.println("Ingrese donde va a ser la capacitación");
 				lugarCapacitacion=sc.nextLine();
 				capacitacion.setLugar(lugarCapacitacion);
-				System.out.println("Ingrese la duracion de la capacitacion en minutos");
+				System.out.println("Ingrese la duracion de la capacitacion en minutos (formato númerico)");
 				duracionCapacitacion=sc.nextLine();
 				capacitacion.setDuracion(duracionCapacitacion);
 				System.out.println("Ingrese la cantidad de asistentes a la capacitación");
@@ -207,7 +211,13 @@ public class Main {
 		}
 		} while (opcion!=9);
 	}
-
+	
+	/**
+	 * 
+	 * Métdo estatico que despliega en consola el menú.
+	 * @return tipo int. 
+	 * 
+	 */
 	private static int desplegarMenu() {
 		Scanner sc=new Scanner(System.in);
 		int opcion;
