@@ -106,7 +106,10 @@ public class Cliente extends Usuario{
 	public String getComuna() {
 		return comuna;
 	}
-	
+	/**
+	 * Método que modifica la comuna del cliente validando que no tenga más de 50 caracteres
+	 * @param comuna De tipo String, almacena la nueva dirección del cliente
+	 */
 	public void setComuna(String comuna) {
 		while(comuna.length()>50) {
 			System.out.println("Comuna debe tener como maximo 50 caracteres");
@@ -114,11 +117,17 @@ public class Cliente extends Usuario{
 		}
 		this.comuna = comuna;
 	}
-	
+	/**
+	 * Método que retorna el sistema de salud del cliente
+	 * @return Retorna entero que almacena el sistema de salud del cliente
+	 */
 	public int getSistemaSalud() {
 		return sistemaSalud;
 	}
-	
+	/**
+	 * Método que modifica el sistema de salud del cliente validando que el número sea 1 o 2
+	 * @param sistemaSalud De tipo int, almacena el nuevo sistema de salud del cliente
+	 */
 	public void setSistemaSalud(int sistemaSalud) {
 		while(sistemaSalud != 1 && sistemaSalud != 2) {
 			System.out.println("Debe ingresar opcion 1 para fonasa o 2 para isapre");
@@ -126,11 +135,17 @@ public class Cliente extends Usuario{
 		}
 		this.sistemaSalud= sistemaSalud;
 	}
-	
+	/**
+	 * Método que retorna la edad del cliente
+	 * @return Retorna entero que almacena la edad del cliente
+	 */
 	public int getEdad() {
 		return edad;
 	}
-	
+	/**
+	 * Método que modifica la edad del cliente validando que esta se encuentre entre 0 y 150
+	 * @param edad De tipo int, almacena la nueva edad del cliente
+	 */
 	public void setEdad(int edad) {
 		while (edad < 0 || edad > 150) {
 			System.out.println("Edad debe ir de 0 a 150 anios");
@@ -138,11 +153,17 @@ public class Cliente extends Usuario{
 		}
 		this.edad=edad;
 	}
-	
+	/**
+	 * Método que retorna el rut del cliente
+	 * @return Retorna entero que almacena el rut del cliente
+	 */
 	public int getRut() {
 		return rut;
 	}
-	
+	/**
+	 * Método que modifica el rut del cliente validando que este no sea un número superior a 99.999.999
+	 * @param rut De tipo int, almacena el nuevo rut del cliente
+	 */
 	public void setRut(int rut) {
 		while(run>99999999) {
 			System.out.println("Ingrese un rut válido");
@@ -151,17 +172,23 @@ public class Cliente extends Usuario{
 		}
 		this.rut = rut;
 	}
-	
+	/**
+	 * Método que implementa de la interfaz IAsesoria, imprime la dirección y la comuna del cliente
+	 */
 	@Override
 	public void analizarUsuario() {
 		super.analizarUsuario();
 		System.out.println("Direccion: "+direccion+", Comuna:" +comuna+"\n");
 	}
-	
+	/**
+	 * Método que imprime el nombre más el apellido del cliente
+	 */
 	public void obtenerNombre() {
 		System.out.println("El nombre del cliente es:" + nombre + apellido);
 	}	
-	
+	/**
+	 * Método que imprime el sistema de salud, Fonasa si es 1 e Isapre si es 2
+	 */
 	public void obetenerSistemaSalud() {
 		if(sistemaSalud == 1 ) {
 			System.out.println("Su sistema de salud es Fonasa");
@@ -169,7 +196,10 @@ public class Cliente extends Usuario{
 			System.out.println("Su sistema de salud es Isapre");
 		}
 	}
-
+	/**
+	 * Método que retorna un String que contiene la concatenación de los atributos del cliente
+	 * @return Retorna un String que contiene los atributos del cliente incluyendo los atributos de la clase padre (Usuario)
+	 */
 	public String listarCliente() {
 		return super.toString()+"Cliente [telefono=" + telefono + ", afp=" + afp + ", direccion=" + direccion + ", comuna=" + comuna
 				+ ", sistemaSalud=" + sistemaSalud + ", edad=" + edad + "]";
