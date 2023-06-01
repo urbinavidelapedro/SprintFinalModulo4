@@ -10,14 +10,31 @@ import java.util.Scanner;
  * 
  */
 public class Cliente extends Usuario{
+	
 	private String telefono, afp, direccion, comuna;
 	private int sistemaSalud, edad;
 	private int rut;
 	
-
+	/**
+	 * Constructor de cliente vacío
+	 */
 	public Cliente () {
 		
 	}
+	/**
+	 * Constructor de cliente con todos los atributos de la clase como parámetros
+	 * @param nombre Variable String que almacena el nombre
+	 * @param apellido De tipo String, almacena el apellido
+	 * @param fechaNacimiento De tipo LocalDate, almacena la fecha de nacimiento
+	 * @param run De tipo entero, corresponde al run del usuario 
+	 * @param rut De tipo entero, corresponde al rut del cliente
+	 * @param telefono De tipo String, corresponde al telefono del cliente
+	 * @param afp De tipo String, almacena la afp del cliente
+	 * @param sistemaSalud De tipo entero, almacena el sistema de salud del cliente (1 Fonasa, 2 Isapre)
+	 * @param direccion De tipo String, almacena la dirección del cliente
+	 * @param comuna De tipo String, almacena la comuna del cliente 
+	 * @param edad De tipo entero, almacena la edad del cliente
+	 */
 	public Cliente(String nombre, String apellido, LocalDate fechaNacimiento,int run,int rut, String telefono,
 			String afp, int sistemaSalud, String direccion, String comuna, int edad) {
 		super(nombre, apellido, fechaNacimiento,run);
@@ -28,22 +45,35 @@ public class Cliente extends Usuario{
 		this.edad=edad;
 		this.rut=rut;
 	}
-	
+	/**
+	 * Método que retorna el teléfono del cliente
+	 * @return retorna el teléfono del cliente
+	 * 	 
+	 */
 	public String getTelefono() {
 		return telefono;
 	}
-	
+	/**
+	 * Método que modifica el atributo teléfono del cliente
+	 * @param telefono recibe el teléfono para modificar el atributo del cliente 
+	 */
 	public void setTelefono(String telefono) {
 		while(telefono.isEmpty()) {
 			System.out.println("Favor Ingrese un teléfono válido");
 			telefono = sc.nextLine();
 		}
 	}
-	
+	/**
+	 * Método que retorna la AFP del cliente
+	 * @return retorna la AFP del cliente
+	 */
 	public String getAfp() {
 		return afp;
 	}
-	
+	/**
+	 * Método que modifica el atributo AFP del cliente
+	 * @param afp De tipo String, almacena la nueva AFP del cliente 
+	 */
 	public void setAfp(String afp) {
 		while (afp.length()<4 || afp.length()>30) {
 			System.out.println("Afp debe tener minimo 4 caracteres y maximo 30");
@@ -51,11 +81,17 @@ public class Cliente extends Usuario{
 		}
 		this.afp=afp;
 	}
-	
+	/**
+	 * Método que retorna la dirección del cliente
+	 * @return Retorna la dirección del cliente
+	 */
 	public String getDireccion() {
 		return direccion;
 	}
-	
+	/**
+	 * Método que modifica la dirección del cliente validando que tenga 70 caracteres como máximo
+	 * @param direccion De tipo String, almacena la nueva dirección del cliente
+	 */
 	public void setDireccion(String direccion) {
 		while(direccion.length()>70) {
 			System.out.println("Direccion debe tener como maximo 70 caracteres");
@@ -63,7 +99,10 @@ public class Cliente extends Usuario{
 		}
 		this.direccion = direccion;
 	}
-	
+	/**
+	 * Método que retorna la comuna del cliente
+	 * @return Retorna un String con la comuna del cliente 
+	 */
 	public String getComuna() {
 		return comuna;
 	}
@@ -130,7 +169,7 @@ public class Cliente extends Usuario{
 			System.out.println("Su sistema de salud es Isapre");
 		}
 	}
-	
+
 	public String listarCliente() {
 		return super.toString()+"Cliente [telefono=" + telefono + ", afp=" + afp + ", direccion=" + direccion + ", comuna=" + comuna
 				+ ", sistemaSalud=" + sistemaSalud + ", edad=" + edad + "]";

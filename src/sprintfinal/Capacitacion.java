@@ -19,7 +19,7 @@ public class Capacitacion {
 	public Capacitacion () {
 
 	}
-
+	
 	public Capacitacion(int cantidadAsistentes, String rut, String dia, String lugar, String duracion,
 			int identificador, LocalTime hora) {
 		super();
