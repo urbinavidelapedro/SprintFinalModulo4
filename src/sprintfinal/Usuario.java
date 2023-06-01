@@ -161,7 +161,11 @@ public class Usuario implements IAsesoria{
 		this.fechaNacimiento=LocalDate.of(anio, mes, dia);
 	}
 
-
+	/**
+	 * Método que devuelve una representación de tipo String de la instancia actual de la clase Usuario.
+	 *
+	 * @return representación de tipo String  que representa la instancia actual de la clase Usuario.
+	 */
 	@Override
 	public String toString() {
 		return "Usuario [nombre=" + nombre + ", apellido=" + apellido + ", run=" + run + ", fechaNacimiento="
