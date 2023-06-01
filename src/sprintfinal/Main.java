@@ -48,7 +48,7 @@ public class Main {
 				System.out.println("Ingrese un mes (1-12)");
 				mes=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese un anio (mayor a 0 y menor que el anio actual)");
+				System.out.println("Ingrese un anio (mayor a 0)");
 				anio=sc.nextInt();
 				sc.nextLine();
 				cliente.setFechaNacimiento(dia,mes,anio);
@@ -93,13 +93,13 @@ public class Main {
 				profesional.setRun(run);
 				sc.nextLine();
 				System.out.println("Fecha de nacimiento");
-				System.out.println("Ingrese un día");
+				System.out.println("Ingrese un día (1-31)");
 				dia=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese un mes");
+				System.out.println("Ingrese un mes (1-12)");
 				mes=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese un anio");
+				System.out.println("Ingrese un año (mayor a 0)");
 				anio=sc.nextInt();
 				sc.nextLine();
 				profesional.setFechaNacimiento(dia,mes,anio);
@@ -113,7 +113,7 @@ public class Main {
 				System.out.println("Ingrese el mes (1-12)");
 				mes=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese el anio (mayor a 0 y menor o igual al anio actual)");
+				System.out.println("Ingrese el anio (mayor a 0)");
 				anio=sc.nextInt();
 				sc.nextLine();
 				profesional.setFechaIngreso(dia,mes,anio);
@@ -134,13 +134,13 @@ public class Main {
 				sc.nextLine();
 				administrativo.setRun(run);
 				System.out.println("Fecha de nacimiento");
-				System.out.println("Ingrese un día");
+				System.out.println("Ingrese un día (1-31)");
 				dia=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese un mes");
+				System.out.println("Ingrese un mes (1-12)");
 				mes=sc.nextInt();
 				sc.nextLine();
-				System.out.println("Ingrese un anio");
+				System.out.println("Ingrese un anio (mayor a 0)");
 				anio=sc.nextInt();
 				sc.nextLine();
 				administrativo.setFechaNacimiento(dia,mes,anio);
@@ -160,7 +160,7 @@ public class Main {
 				identificador=sc.nextInt();
 				sc.nextLine();
 				capacitacion.setIdentificador(identificador);
-				System.out.println("Ingrese el rut");
+				System.out.println("Ingrese el rut (valor numérico)");
 				rutCapacitacion=sc.nextLine();
 				capacitacion.setRut(rutCapacitacion);
 				System.out.println("Ingrese el día de la capacitación (Lunes, Martes, Miércoles, Jueves, Viernes, Sábado o Domingo)");
@@ -169,13 +169,13 @@ public class Main {
 				System.out.println("Ingrese a que hora es la capacitación (hh:mm)");
 				horaCapacitacion=LocalTime.parse(sc.nextLine());
 				capacitacion.setHora(horaCapacitacion);
-				System.out.println("Ingrese donde va a ser la capacitación");
+				System.out.println("Ingrese lugar de la capacitación");
 				lugarCapacitacion=sc.nextLine();
 				capacitacion.setLugar(lugarCapacitacion);
-				System.out.println("Ingrese la duracion de la capacitacion en minutos (formato númerico)");
+				System.out.println("Ingrese la duracion de la capacitacion en minutos (valor númerico)");
 				duracionCapacitacion=sc.nextLine();
 				capacitacion.setDuracion(duracionCapacitacion);
-				System.out.println("Ingrese la cantidad de asistentes a la capacitación");
+				System.out.println("Ingrese la cantidad de asistentes a la capacitación (valor numérico)");
 				cantidadAsistentes=sc.nextInt();
 				sc.nextLine();
 				capacitacion.setCantidadAsistentes(cantidadAsistentes);
@@ -183,7 +183,7 @@ public class Main {
 				opcion=desplegarMenu();
 				break;
 			case 5:
-				System.out.println("Ingrese un rut para eliminar");
+				System.out.println("Ingrese un rut para eliminar (valor numérico)");
 				run=sc.nextInt();
 				sc.nextLine();
 				contenedor.eliminarUsuario(run);
@@ -207,6 +207,7 @@ public class Main {
 				break;
 			case 9:
 				System.out.println("Finalizando programa");
+				sc.close();
 				System.exit(0);
 		}
 		} while (opcion!=9);
