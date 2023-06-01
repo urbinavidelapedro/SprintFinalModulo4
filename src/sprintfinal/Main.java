@@ -72,7 +72,7 @@ public class Main {
 				System.out.println("Ingrese una comuna");
 				comuna=sc.nextLine();
 				cliente.setComuna(comuna);
-				System.out.println("Ingrese una edad");
+				System.out.println("Ingrese una edad (valor numérico)");
 				edad=sc.nextInt();
 				sc.nextLine();
 				cliente.setEdad(edad);
