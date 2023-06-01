@@ -97,11 +97,7 @@ public class Cliente extends Usuario{
 			System.out.println("Edad debe ir de 0 a 150 anios");
 			edad = sc.nextInt();
 		}
-<<<<<<< HEAD
-		this.edad = edad;	
-=======
-		this.edad = edad;			
->>>>>>> fcd3e824b9b5c4b5e863e34751dc5f44360dae81
+		this.edad=edad;
 	}
 	
 	public int getRut() {
