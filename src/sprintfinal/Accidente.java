@@ -70,7 +70,7 @@ public class Accidente {
 	}
 
 	/**
-	 * Constructor de cliente vacio
+	 * Constructor de accidente vacio
 	 */
 	public Accidente() {
 		super();
@@ -87,7 +87,7 @@ public class Accidente {
 	}
 	/**
 	 *Método que recibe el valor de idAccidente
-	 * @param idAccidente toma el valor de idAccidente
+	 * @param idAccidente recibe el valor de idAccidente
 	 */
 
 	public void setIdAccidente(int idAccidente) {

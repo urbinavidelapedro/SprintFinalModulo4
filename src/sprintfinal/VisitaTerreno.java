@@ -21,7 +21,7 @@ public class VisitaTerreno {
 	
 	
 	/**
-	 * 
+	 * Constructor de Visita a terreno con todos los atributos de la clase como parámetros
 	 * @param idVisitaTerreno De tipo entero, recibe el numero de identificacion de la visita a terreno
 	 * @param rutCliente      
 	 * @param lugar
@@ -51,56 +51,112 @@ public class VisitaTerreno {
 		this.dia = dia;
 		this.hora = hora;
 	}
+	/**
+	 * Constructor de visita a terreno vacio
+	 */
 	public VisitaTerreno() {
 		
 	}
 	
+	/**
+	 * Método que retorna la id de la visita a terreno
+	 * @return retorna la visita a terreno
+	 */
+	
 	public int getIdVisitaTerreno() {
 		return idVisitaTerreno;
 	}
+	/**
+	 * Método que recibe el valor de idVisitaTerreno
+	 * @param idVisitaTerreno recibe el valor de idVisitaTerreno
+	 */
 	
 	public void setIdVisitaTerreno(int idVisitaTerreno) {
 		this.idVisitaTerreno = idVisitaTerreno;
 	}
-	
+	/**
+	 * Método que retorna rutCliente
+	 * @return retorna rutCliente
+	 */
 	public String getRutCliente() {
 		return rutCliente;
 	}
+	/**
+	 * Método que recibe rutCliente
+	 * @param rutCliente recibe el valor de rutCliente
+	 */
 	
 	public void setRutCliente(String rutCliente) {
 		this.rutCliente = rutCliente;
 	}
+	/**
+     * Método que retorna el lugar 
+     * @return Retorna el lugar 
+     */
 	
 	public String getLugar() {
 		return lugar;
 	}
+	/**
+	 * Método que recibe el valor de lugar
+	 * @param lugar recibe el valor de lugar
+	 */
+
 	
 	public void setLugar(String lugar) {
 		this.lugar = lugar;
 	}
 	
+	/**
+     * Método que retorna el comentarios
+     * @return Retorna comentarios
+     * 
+     */
 	public String getComentarios() {
 		return comentarios;
 	}
+	
+	/**
+	 * Método que recibe comentarios
+	 * @param comentarios recibe el valor de comentarios
+	 */
 	
 	public void setComentarios(String comentarios) {
 		this.comentarios = comentarios;
 	}
 	
+	/**
+	 * Método que retorna Dia
+	 * @return Retorna dia
+	 */
 	public LocalDate getDia() {
 		return dia;
 	}
+	/**
+	 * Método que recibe el dia
+	 * @param dia recibe el valor de dia
+	 */
+	
 	public void setDia(LocalDate dia) {
 		this.dia = dia;
 	}
+	
+	/**
+	 * Método que retorna la hora
+	 * @return Retorna la hora
+	 */
 	
 	public LocalTime getHora() {
 		return hora;
 	}
 	
+	/**
+	 * Método que recibe la hora
+	 * @param hora recibe el valor de hora
+	 */
+	
 	public void setHora(LocalTime hora) {
 		this.hora = hora;
 	}
-	
 	
 }
