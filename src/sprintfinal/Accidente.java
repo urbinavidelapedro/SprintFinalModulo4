@@ -12,9 +12,6 @@ import java.util.Date;
  * 
  */
 public class Accidente {
-	/**
-	 * 
-	 */
 	
 	private int idAccidente;
 	private String rutCliente, lugar, origen, consecuencias;

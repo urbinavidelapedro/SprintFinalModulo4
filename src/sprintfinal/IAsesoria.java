@@ -1,6 +1,6 @@
 package sprintfinal;
 /**
- * Método interfaz que declara el método analizarUsuario()
+ * Interfaz que declara el método analizarUsuario()
  * @author Lino Cortés
  * @author Felipe Toro
  * @author Sergio Morales
