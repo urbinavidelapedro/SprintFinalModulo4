@@ -31,9 +31,108 @@ public class Main {
 		 * Se llama una nueva instancia de Contenedor 
 		 */
 		Contenedor contenedor = new Contenedor();
-		String nombre,apellido,tipoUsuario,telefono,direccion,comuna,afp,rutCapacitacion,diaCapacitacion,duracionCapacitacion,lugarCapacitacion,titulo,area,experienciaPrevia;
+		/**
+		 * Atributo String nombre de un usuario
+		 */
+		String nombre;
+		/**
+		 * Atributo String con apellido de un usuario
+		 */
+		String apellido;
+		/**
+		 * Atributo String con el tipo usuario (Cliente, Administrativo, Profesional)
+		 */
+		String tipoUsuario;
+		/**
+		 * Atributo String telefono del usuario
+		 */
+		String telefono;
+		/**
+		 * Atributo String direccion del usuario
+		 */
+		String direccion;
+		/**
+		 * Atributo String comuna del usuario
+		 */
+		String comuna;
+		/**
+		 * Atributo String Afp del usuario
+		 */
+		String afp;
+		/**
+		 * Atributo String rut de la capacitacion
+		 */
+		String rutCapacitacion;
+		/**
+		 * Atributo String dia de la capacitacion
+		 */
+		String diaCapacitacion;
+		/**
+		 * Atributo String duracion de la capacitacion
+		 */
+		String duracionCapacitacion;
+		/**
+		 * Atributo String lugar de la capacitacion
+		 */
+		String lugarCapacitacion;
+		/**
+		 * Atributo String titulo de profesional
+		 */
+		String titulo;
+		/**
+		 * Atributo String area de administrativo
+		 */
+		String area;
+		/**
+		 * Atributo String experiencia del administrativo
+		 */
+		String experienciaPrevia;
+		
+		
+		/**
+		 * Atributo LocalTime hora de la capacitacion
+		 */
 		LocalTime horaCapacitacion;
-		int opcion,rut,dia,mes,anio,run,sistemaSalud,edad,identificador,cantidadAsistentes;
+		/**
+		 * Atributo entero opcion del menu
+		 */
+		int opcion;
+		/**
+		 * Atributo entero rut capacitacion
+		 */
+		int rut;
+		/**
+		 * Atributo entero dia
+		 */
+		int dia;
+		/**
+		 * Atributo entero mes
+		 */
+		int mes;
+		/**
+		 * Atribuyo entero anio
+		 */
+		int anio;
+		/**
+		 * Atributo entero run usuario
+		 */
+		int run;
+		/**
+		 * Atributo entero sistema de salud 1 fonasa, 2 isapre
+		 */
+		int sistemaSalud;
+		/**
+		 * Atributo entero edad
+		 */
+		int edad;
+		/**
+		 * Atributo entero identificador
+		 */
+		int identificador;
+		/**
+		 * Atributo entero cantidad de asistentes
+		 */
+		int cantidadAsistentes;
 		
 		
 		/**

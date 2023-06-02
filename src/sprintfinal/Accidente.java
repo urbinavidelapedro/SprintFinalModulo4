@@ -12,10 +12,33 @@ import java.util.Date;
  * 
  */
 public class Accidente {
-	
+	/**
+	 * Atributo entero id del accidente
+	 */
 	private int idAccidente;
-	private String rutCliente, lugar, origen, consecuencias;
+	/**
+	 * Atributo String rut de cliente
+	 */
+	private String rutCliente; 
+	/**
+	 * Atributo String lugar del accidente
+	 */
+	private String lugar;
+	/**
+	 * Atributo String origen del accidente
+	 */
+	private String origen;
+	/**
+	 * Atributo String consecuencias del accidente
+	 */
+	private String consecuencias;
+	/**
+	 * Atributo LocalDate dia del accidente
+	 */
 	private LocalDate dia;
+	/**
+	 * Atributo LocalTime hora del accidente
+	 */
 	private LocalTime hora;
 	Scanner sc =  new Scanner(System.in);
 	

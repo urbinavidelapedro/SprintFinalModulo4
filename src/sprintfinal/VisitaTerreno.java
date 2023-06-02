@@ -13,9 +13,29 @@ import java.util.Scanner;
  */
 
 public class VisitaTerreno {
+	/**
+	 * Atributo entero de la id de la visita a terreno
+	 */
 	private int idVisitaTerreno;
-	private String rutCliente, lugar, comentarios;
+	/**
+	 * Atributo String rut del cliente
+	 */
+	private String rutCliente;
+	/**
+	 * Atributo String lugar de la visita
+	 */
+	private String lugar;
+	/**
+	 * Atributo String comentarios de la visita
+	 */
+	private String comentarios;
+	/**
+	 * Atributo LocalDate dia de la visita
+	 */
 	private LocalDate dia;
+	/**
+	 * Atributo LocalTime hora de la visita
+	 */
 	private LocalTime hora;
 	private Scanner sc = new Scanner(System.in); 
 	
@@ -23,11 +43,11 @@ public class VisitaTerreno {
 	/**
 	 * Constructor de Visita a terreno con todos los atributos de la clase como parámetros
 	 * @param idVisitaTerreno De tipo entero, recibe el numero de identificacion de la visita a terreno
-	 * @param rutCliente      
-	 * @param lugar
-	 * @param comentarios
-	 * @param dia
-	 * @param hora
+	 * @param rutCliente De  tipo String, recibe el rut del cliente     
+	 * @param lugar De tipo String, recibe el lugar de la visita
+	 * @param comentarios De tipo String, recibe los comentarios de la visita
+	 * @param dia De tipo LocalDate, recibe  el dia 
+	 * @param hora de tipo LocalTime, recibe la hora
 	 */
 	VisitaTerreno(int idVisitaTerreno, String rutCliente, String lugar, String comentarios, LocalDate dia, LocalTime hora) {
 		this.idVisitaTerreno=idVisitaTerreno;

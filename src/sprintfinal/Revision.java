@@ -10,10 +10,25 @@ import java.util.Scanner;
  */
 public class Revision {
 	
+	/**
+	 * Atributo entero id de la revision
+	 */
 	private int idRevision;
+	/**
+	 * Atributo entero id de la visita a terreno
+	 */
 	private int idVisitaTerreno;
+	/**
+	 * Atributo String nombre de la revision
+	 */
 	private String nombreRevision;
+	/**
+	 * Atributo String detalle de la revision
+	 */
 	private String detalleRevision;
+	/**
+	 * Atributo entero estado de la revision
+	 */
 	private int estado;
 	
 	private Scanner sc = new Scanner(System.in);
