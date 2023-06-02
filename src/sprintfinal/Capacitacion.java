@@ -11,9 +11,40 @@ import java.util.Scanner;
  *
  */
 public class Capacitacion {
-	int cantidadAsistentes, identificador;
-	String rut,dia,lugar,duracion;
-	LocalTime hora;
+    /**
+     * Cantidad de asistentes de la capacitación.
+     */
+    int cantidadAsistentes;
+
+    /**
+     * Identificador de la capacitación.
+     */
+    int identificador;
+
+    /**
+     * Rut asociado a la capacitación.
+     */
+    String rut;
+
+    /**
+     * Día de la semana en la cual será la capacitación.
+     */
+    String dia;
+
+    /**
+     * Lugar donde se llevara a cabo la capacitación.
+     */
+    String lugar;
+
+    /**
+     * Duración de la capacitación en minutos.
+     */
+    String duracion;
+
+    /**
+     * Hora en que se iniciará la capacitación en formato 00:00..
+     */
+    LocalTime hora;
 	Scanner sc = new Scanner(System.in);
 
 /**

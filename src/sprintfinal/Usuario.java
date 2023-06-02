@@ -11,10 +11,42 @@ import java.util.Scanner;
  * constructor vacio y con parámetros  y métodos setter con sus respectivas validaciones y getter.
  *
  */
-public class Usuario implements IAsesoria{
-	String nombre, apellido;
-	int run, dia, mes, anio;
-	LocalDate fechaNacimiento;
+public class Usuario implements IAsesoria {
+
+    /**
+     * Nombre asociado al usuario.
+     */
+    String nombre;
+
+    /**
+     * Apellido asociado al usuario.
+     */
+    String apellido;
+
+    /**
+     * Número de RUN asociado al usuario.
+     */
+    int run;
+
+    /**
+     * Día de nacimiento asociado al usuario.
+     */
+    int dia;
+
+    /**
+     * Mes de nacimiento asociado al usuario.
+     */
+    int mes;
+
+    /**
+     * Año de nacimiento asociado al usuario.
+     */
+    int anio;
+
+    /**
+     * Fecha de nacimiento asociada al  usuario.
+     */
+    LocalDate fechaNacimiento;
 	Scanner sc = new Scanner(System.in);
 
 /**
