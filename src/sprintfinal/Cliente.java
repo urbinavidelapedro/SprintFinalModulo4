@@ -10,9 +10,33 @@ import java.util.Scanner;
  * 
  */
 public class Cliente extends Usuario{
-	
-	private String telefono, afp, direccion, comuna;
-	private int sistemaSalud, edad;
+	/**
+	 * Atributo String correspondientes al telefono del cliente
+	 */
+	private String telefono;
+	/**
+	 * Atributo String correspondiente a la AFP del cliente
+	 */
+	private String afp;
+	/**
+	 * Atributo String correspondiente a la dirección del cliente
+	 */
+	private String direccion;
+	/**
+	 * Atributo String correspondiente a la comuna del cliente
+	 */
+	private String comuna;
+	/**
+	 * Atributo entero correspondiente al sistema de salud del cliente
+	 */
+	private int sistemaSalud;
+	/**
+	 * Atributo entero correspondiente a la edad del cliente
+	 */
+	private int edad;
+	/**
+	 * Atributo entero correspondiente al rut del cliente
+	 */
 	private int rut;
 	
 	/**

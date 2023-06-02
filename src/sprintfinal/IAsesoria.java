@@ -7,5 +7,8 @@ package sprintfinal;
  * @author Pedro Urbina
  */
 public interface IAsesoria {
+	/**
+	 * Método a implementar por usuario y sus derivados
+	 */
 	void analizarUsuario();
 }
