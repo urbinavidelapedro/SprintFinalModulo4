@@ -13,13 +13,11 @@ import java.util.Scanner;
  */
 
 public class VisitaTerreno {
-<<<<<<< HEAD
+
 	/**
 	 * Atributo entero de la id de la visita a terreno
 	 */
-=======
 
->>>>>>> aaa1792be776712690eccb0e690ccc274acef617
 	private int idVisitaTerreno;
 	/**
 	 * Atributo String rut del cliente
