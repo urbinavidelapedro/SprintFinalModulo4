@@ -13,6 +13,7 @@ import java.util.Scanner;
  */
 
 public class VisitaTerreno {
+
 	private int idVisitaTerreno;
 	private String rutCliente, lugar, comentarios;
 	private LocalDate dia;

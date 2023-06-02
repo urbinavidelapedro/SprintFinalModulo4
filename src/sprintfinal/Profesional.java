@@ -9,8 +9,13 @@ import java.time.LocalDate;
  * 
  */
 public class Profesional extends Usuario{
-	
+	/**
+	 * Atributo String correspondiente al título del profesional
+	 */
 	String titulo;
+	/**
+	 * Atributo LocalDate correspondiente a la fecha de ingreso del profesional
+	 */
 	LocalDate fechaIngreso;
 	
 	/**

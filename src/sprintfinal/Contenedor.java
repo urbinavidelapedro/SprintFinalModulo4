@@ -10,7 +10,13 @@ import java.util.List;
  * 
  */
 public class Contenedor {
+	/**
+	 * Atributo de tipo Lista que almacena objetos de la clase IAsesoria en donde se almacenarán los usuarios
+	 */
 	private List<IAsesoria> usuarios = new ArrayList<>();
+	/**
+	 * Atributo de tipo Lista que almacena objetos de la clase Capacitacion en donde se almacenan las capacitaciones
+	 */
 	private List<Capacitacion> capacitaciones=new ArrayList<>();
 	/**
 	 * Constructor sin parámetros
